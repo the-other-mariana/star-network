@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?ccsproject version="1.0"?>
+<projectOptions>
+	<ccsVersion value="11.1.0"/>
+	<deviceVariant value="Cortex M.CC2652RB1F"/>
+	<deviceFamily value="TMS470"/>
+	<deviceEndianness value="little"/>
+	<codegenToolVersion value="20.2.5.LTS"/>
+	<isElfFormat value="true"/>
+	<connection value="common/targetdb/connections/TIXDS110_Connection.xml"/>
+	<rts value=""/>
+	<createSlaveProjects value=""/>
+	<ignoreDefaultDeviceSettings value="true"/>
+	<ignoreDefaultCCSSettings value="true"/>
+	<templateProperties value="id=collector_LP_CC2652RB_tirtos7_ccs.projectspec.collector_LP_CC2652RB_tirtos7_ccs,buildProfile=release,isHybrid=true"/>
+	<origin value="C:\ti\simplelink_cc13xx_cc26xx_sdk_5_40_00_40\examples\rtos\LP_CC2652RB\ti154stack\collector\tirtos7\ccs\collector_LP_CC2652RB_tirtos7_ccs.projectspec"/>
+	<filesToOpen value="README.html"/>
+</projectOptions>

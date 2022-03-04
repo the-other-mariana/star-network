@@ -1,0 +1,184 @@
+digraph Model
+{
+    graph[rankdir=LR]
+
+    // mod.$name=/ti/common/multi_stack_validate
+
+    // mod.$name=/ti/devices/CCFG
+    ti_devices_CCFG -> ti_drivers_Temperature
+    ti_devices_CCFG -> ti_devices_CCFGTemplate0
+
+    // mod.$name=/ti/devices/CCFGTemplate
+
+    // mod.$name=/ti/devices/DriverLib
+
+    // mod.$name=/ti/devices/radioconfig/code_export_param
+
+    // mod.$name=/ti/devices/radioconfig/rfdesign
+
+    // mod.$name=/ti/devices/radioconfig/settings/ieee_15_4
+    ti154stack_250KbpsIeee802154 -> ti_drivers_RF
+    ti154stack_250KbpsIeee802154 -> ti_devices_radioconfig_rfdesign
+    ti154stack_250KbpsIeee802154 -> ti_devices_radioconfig_code_export_param0
+
+    // mod.$name=/ti/display/Display
+    CONFIG_DISPLAY -> ti_drivers_Board
+    CONFIG_DISPLAY -> CONFIG_DISPLAY_UART
+
+    // mod.$name=/ti/dpl/Settings
+
+    // mod.$name=/ti/drivers/AESCCM
+    CONFIG_AESCCM_0 -> ti_drivers_DMA
+    CONFIG_AESCCM_0 -> ti_drivers_Power
+    CONFIG_AESCCM_0 -> ti_drivers_Board
+
+    // mod.$name=/ti/drivers/Board
+    ti_drivers_Board -> ti_drivers_GPIO
+    ti_drivers_Board -> ti_devices_DriverLib
+    ti_drivers_Board -> ti_dpl_Settings
+
+    // mod.$name=/ti/drivers/DMA
+    ti_drivers_DMA -> ti_drivers_Board
+
+    // mod.$name=/ti/drivers/GPIO
+
+    // mod.$name=/ti/drivers/NVS
+    CONFIG_NVSINTERNAL -> ti_drivers_Board
+    CONFIG_NVSINTERNAL -> ti_drivers_nvs_NVSCC26XX0
+
+    // mod.$name=/ti/drivers/Power
+    ti_drivers_Power -> ti_devices_CCFG
+    ti_drivers_Power -> ti_drivers_Board
+
+    // mod.$name=/ti/drivers/RF
+    ti_drivers_RF -> ti_drivers_Power
+    ti_drivers_RF -> ti_drivers_Board
+
+    // mod.$name=/ti/drivers/RTOS
+
+    // mod.$name=/ti/drivers/Temperature
+
+    // mod.$name=/ti/drivers/UART2
+    CONFIG_DISPLAY_UART -> ti_drivers_DMA
+    CONFIG_DISPLAY_UART -> ti_drivers_Power
+    CONFIG_DISPLAY_UART -> ti_drivers_Board
+    CONFIG_DISPLAY_UART -> CONFIG_GPIO_DISPLAY_UART_TX
+    CONFIG_DISPLAY_UART -> CONFIG_GPIO_DISPLAY_UART_RX
+
+    // mod.$name=/ti/drivers/apps/Button
+    CONFIG_BTN_LEFT -> ti_drivers_Board
+    CONFIG_BTN_RIGHT -> ti_drivers_Board
+    CONFIG_BTN_LEFT -> CONFIG_GPIO_BTN1
+    CONFIG_BTN_RIGHT -> CONFIG_GPIO_BTN2
+
+    // mod.$name=/ti/drivers/apps/LED
+    CONFIG_LED_RED -> ti_drivers_Board
+    CONFIG_LED_GREEN -> ti_drivers_Board
+    CONFIG_LED_RED -> CONFIG_GPIO_RLED
+    CONFIG_LED_GREEN -> CONFIG_GPIO_GLED
+
+    // mod.$name=/ti/drivers/nvs/NVSCC26XX
+
+    // mod.$name=/ti/sysbios/BIOS
+    ti_sysbios_BIOS -> ti_sysbios_knl_Idle
+    ti_sysbios_BIOS -> ti_sysbios_runtime_Error
+    ti_sysbios_BIOS -> ti_sysbios_runtime_Memory
+    ti_sysbios_BIOS -> ti_sysbios_rts_MemAlloc
+    ti_sysbios_BIOS -> ti_sysbios_runtime_System
+    ti_sysbios_BIOS -> ti_sysbios_runtime_Startup
+    ti_sysbios_BIOS -> ti_sysbios_BIOSStartUserFuncs
+    ti_sysbios_BIOS -> ti_sysbios_knl_Clock
+    ti_sysbios_BIOS -> ti_sysbios_knl_Task
+    ti_sysbios_BIOS -> ti_sysbios_knl_Swi
+    ti_sysbios_BIOS -> ti_sysbios_heaps_HeapCallback
+    ti_sysbios_BIOS -> ti_sysbios_gates_GateMutexPri
+    ti_sysbios_BIOS -> ti_sysbios_family_arm_cc26xx_Seconds
+    ti_sysbios_BIOS -> ti_sysbios_family_arm_cc26xx_Boot
+    ti_sysbios_BIOS -> ti_sysbios_family_arm_m3_Hwi
+    ti_sysbios_BIOS -> BIOS_init
+
+    // mod.$name=/ti/sysbios/BIOSStartUserFuncs
+
+    // mod.$name=/ti/sysbios/family/arm/cc26xx/Boot
+    ti_sysbios_family_arm_cc26xx_Boot -> Boot_trimDevice
+
+    // mod.$name=/ti/sysbios/family/arm/cc26xx/ClockSupport
+    ti_sysbios_family_arm_cc26xx_ClockSupport -> ti_sysbios_family_arm_cc26xx_Timer
+
+    // mod.$name=/ti/sysbios/family/arm/cc26xx/Seconds
+
+    // mod.$name=/ti/sysbios/family/arm/cc26xx/Timer
+
+    // mod.$name=/ti/sysbios/family/arm/m3/Hwi
+    ti_sysbios_family_arm_m3_Hwi -> ti_sysbios_hal_HwiHooks
+    ti_sysbios_family_arm_m3_Hwi -> Hwi_init
+    ti_sysbios_family_arm_m3_Hwi -> Hwi_initNVIC
+    ti_sysbios_family_arm_m3_Hwi -> Hwi_initStack
+
+    // mod.$name=/ti/sysbios/family/arm/m3/TaskSupport
+
+    // mod.$name=/ti/sysbios/gates/GateMutexPri
+
+    // mod.$name=/ti/sysbios/hal/HwiHooks
+
+    // mod.$name=/ti/sysbios/heaps/HeapCallback
+    ti_sysbios_heaps_HeapCallback -> HeapCallback_init
+
+    // mod.$name=/ti/sysbios/knl/Clock
+    ti_sysbios_knl_Clock -> ti_sysbios_family_arm_cc26xx_ClockSupport
+    ti_sysbios_knl_Clock -> ti_sysbios_knl_Queue
+    ti_sysbios_knl_Clock -> Clock_init
+
+    // mod.$name=/ti/sysbios/knl/Idle
+    ti_sysbios_knl_Idle -> Idle_init
+
+    // mod.$name=/ti/sysbios/knl/Queue
+
+    // mod.$name=/ti/sysbios/knl/Semaphore
+
+    // mod.$name=/ti/sysbios/knl/Swi
+    ti_sysbios_knl_Swi -> ti_sysbios_knl_SwiHooks
+    ti_sysbios_knl_Swi -> Swi_init
+
+    // mod.$name=/ti/sysbios/knl/SwiHooks
+
+    // mod.$name=/ti/sysbios/knl/Task
+    ti_sysbios_knl_Task -> ti_sysbios_knl_Idle
+    ti_sysbios_knl_Task -> ti_sysbios_family_arm_m3_TaskSupport
+    ti_sysbios_knl_Task -> ti_sysbios_knl_TaskHooks
+    ti_sysbios_knl_Task -> ti_sysbios_knl_Queue
+    ti_sysbios_knl_Task -> Task_init
+
+    // mod.$name=/ti/sysbios/knl/TaskHooks
+
+    // mod.$name=/ti/sysbios/rts/MemAlloc
+
+    // mod.$name=/ti/sysbios/runtime/Error
+
+    // mod.$name=/ti/sysbios/runtime/Memory
+
+    // mod.$name=/ti/sysbios/runtime/Startup
+
+    // mod.$name=/ti/sysbios/runtime/SysCallback
+
+    // mod.$name=/ti/sysbios/runtime/System
+    ti_sysbios_runtime_System -> ti_sysbios_runtime_SysCallback
+    ti_sysbios_runtime_System -> System_init
+
+    // mod.$name=/ti/ti154stack/rf_config/ti154stack_coex_mod.js
+
+    // mod.$name=/ti/ti154stack/ti154stack
+    ti_ti154stack_ti154stack -> ti_common_multi_stack_validate
+    ti_ti154stack_ti154stack -> ti_devices_radioconfig_rfdesign
+    ti_ti154stack_ti154stack -> ti_drivers_RF
+    ti_ti154stack_ti154stack -> ti_drivers_Power
+    ti_ti154stack_ti154stack -> ti154stack_250KbpsIeee802154
+    ti_ti154stack_ti154stack -> ti_ti154stack_rf_config_ti154stack_coex_mod0
+    ti_ti154stack_ti154stack -> CONFIG_AESCCM_0
+    ti_ti154stack_ti154stack -> ti_ti154stack_ti154stack_config_mod0
+    ti_ti154stack_ti154stack -> ti_ti154stack_ti154stack_config_opts0
+
+    // mod.$name=/ti/ti154stack/ti154stack_config_mod.js
+
+    // mod.$name=/ti/ti154stack/ti154stack_config_opts.js
+}
