@@ -60,7 +60,7 @@ A system that connects Texas Instruments' CC2652RB microcontrollers as nodes of 
     ~.
     ```
 
-### Collector Node
+### Collector Node - Load System
 
 1. Open Code Composer Studio
 
@@ -98,7 +98,7 @@ Cortex_M4_0: GEL Output: Memory Map Initialization Complete.
 Cortex_M4_0: GEL Output: Board Reset Complete.
 ```
 
-### Sensor Node
+### Sensor Node - Load System
 
 Something almost similar:
 
@@ -117,3 +117,109 @@ Once in the `ccs` folder, click on *Select Folder*.
 5. Click on *Finish*.
 
 6. Load the project onto the sensor board the same way we did the collector's.
+
+## Tera Term: Connect The Network For the First Time
+
+1. Open two instances of Tera Term program. This program is similar to PuTTY: its purpose is only to provide an interface to connect to serial ports and see its output.
+
+2. Choose the *Serial* radial button for both instances, and for each of them, choose one UART port:
+
+![img](res/6.png)
+
+3. Click *OK*.
+
+4. For both instances, go to `Set Up > Serial Port` and make sure the fields are the same to the ones below:
+
+![img](res/7.png)
+
+5. Click on *New Setting*.
+
+### Collector Node
+
+1. Click on both of these buttons **at the same time** (BTN-2 + RESET):
+
+![img](res/8.JPG)
+
+And this will reset the boards. The outcome in Tera Term will look as follows (Collector and Sensor Node):
+
+![img](res/2.png)
+
+2. On the Collector Node, press the button shown below (BTN-1):
+
+![img](res/9.JPG)
+
+This will make the node go out of Waiting mode, and the red LED will turn on.
+
+3. To allow the other nodes to connect to this network, press the button below (BTN-2):
+
+![img](res/10.JPG)
+
+This will make the red LED blink on the Collector node.
+
+### Sensor Node
+
+1. To connect a sensor node, press, on the Sensor device, the button below (BTN-1):
+
+![img](res/9.JPG)
+
+Making the output Status be *Starting* and the red LED will turn on.
+
+The terminal now for the nodes will look as follows:
+
+![img](res/3.png)
+
+Showing in this case that 1 node is connected to the Collector.
+
+## Python: Read The Data Being Sent
+
+1. Unplug both of the devices.
+
+2. Run the python code [here](https://github.com/the-other-mariana/star-network/blob/master/manual/SerialData/SerialDataWriter.py) on two instances of the terminal you wish.
+
+3. Plug both the nodes to the PC.
+
+4. Type on each python programs, the COM port of each of the devices.
+
+- Collector:
+
+```
+Serial port: COM7
+```
+
+- Sensor:
+
+```
+Serial port: COM7
+```
+
+5. Perform the same button pressing of the section above. Do not expect any output in the terminals, but once you connect the sensor node, the data sent will be printed in the terminal:
+
+```
+Serial port: COM7
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+0x0001 32 -64 2022-03-10 19:26:58.685076 0
+
+0x0001 32 -54 2022-03-10 19:27:00.943808 1
+
+0x0001 32 -54 2022-03-10 19:27:04.386600 1
+
+0x0001 32 -51 2022-03-10 19:27:07.386576 1
+
+0x0001 32 -51 2022-03-10 19:27:10.386552 1
+
+0x0001 32 -51 2022-03-10 19:27:13.387528 1
+
+0x0001 32 -50 2022-03-10 19:27:16.386505 1
+```
+
