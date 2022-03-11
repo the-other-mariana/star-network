@@ -138,7 +138,7 @@ Once in the `ccs` folder, click on *Select Folder*.
 
 1. Click on both of these buttons **at the same time** (BTN-2 + RESET):
 
-![img](res/8.JPG)
+![img](res/8.jpg)
 
 And this will reset the boards. The outcome in Tera Term will look as follows (Collector and Sensor Node):
 
@@ -146,13 +146,13 @@ And this will reset the boards. The outcome in Tera Term will look as follows (C
 
 2. On the Collector Node, press the button shown below (BTN-1):
 
-![img](res/9.JPG)
+![img](res/9.jpg)
 
 This will make the node go out of Waiting mode, and the red LED will turn on.
 
 3. To allow the other nodes to connect to this network, press the button below (BTN-2):
 
-![img](res/10.JPG)
+![img](res/10.jpg)
 
 This will make the red LED blink on the Collector node.
 
@@ -160,7 +160,7 @@ This will make the red LED blink on the Collector node.
 
 1. To connect a sensor node, press, on the Sensor device, the button below (BTN-1):
 
-![img](res/9.JPG)
+![img](res/9.jpg)
 
 Making the output Status be *Starting* and the red LED will turn on.
 
@@ -183,7 +183,7 @@ Showing in this case that 1 node is connected to the Collector.
 - Collector:
 
 ```
-Serial port: COM7
+Serial port: COM9
 ```
 
 - Sensor:
