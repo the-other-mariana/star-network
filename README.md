@@ -262,6 +262,18 @@ Normally, a serial port is a male port, while a parallel port is a female port. 
 
 - https://software-dl.ti.com/simplelink/esd/simplelink_cc13x2_26x2_sdk/3.30.00.03/exports/docs/ble5stack/ble_user_guide/html/ble-stack-5.x/the-application.html#icall
 
-- https://www.tuner168.com//uploads/soft/161222/3-161222111234.pdf
+- BLE Protocol stack: (Gatt, pp 17) https://www.tuner168.com//uploads/soft/161222/3-161222111234.pdf
 
 - https://software-dl.ti.com/lprf/simplelink_cc26x2_latest/docs/ble5stack/ble_user_guide/html/ble-stack-5.x/the-application.html
+
+- icall_ble_api.h example: https://github.com/rlatrifork/ble_examples_test/blob/master/examples/rtos/CC2640R2_LAUNCHXL/ble5apps/spp_ble_server/src/app/spp_ble_server.c
+
+    - ICall_EntityID dest; ?675
+
+    - https://github.com/rlatrifork/ble_examples_test/blob/master/examples/rtos/CC2640R2_LAUNCHXL/bleapps/spp_ble_client/src/app/main.c
+
+        - priorities? ble profile? GATT init client?
+
+    - selfEntity, ICall_RegisterApp(&selfEntity): https://github.com/rlatrifork/ble_examples_test/blob/master/examples/rtos/CC2640R2_LAUNCHXL/bleapps/spp_ble_client/src/app/spp_ble_client.c#L513 
+
+- icall_ble_api.h docs: https://software-dl.ti.com/simplelink/esd/simplelink_cc13x2_26x2_sdk/4.20.00.35/exports/docs/ble5stack/ble_user_guide/doxygen/ble/html/group___i_call.html
