@@ -223,3 +223,45 @@ None
 0x0001 32 -50 2022-03-10 19:27:16.386505 1
 ```
 
+## Handy Links
+
+- https://dev.ti.com/tirex/explore/node?devtools=LAUNCHXL-CC26X2R1&node=AJ43pE6nKn8za7wNS.b7NQ__FUz-xrs__LATEST
+
+- https://dev.ti.com/tirex/explore/node?node=AFU6dryAU8NukjdRPy4T4Q__pTTHBmu__LATEST
+
+- collector.c line 2447
+
+```c
+Collector_statistics.trackingRequestAttempts++;
+```
+
+- collector.c, line 2032
+
+```c
+\\ Send MAC data request
+static bool sendMsg(Smsgs_cmdIds_t type, uint16_t dstShortAddr, bool rxOnIdle,
+                    uint16_t len,
+                    uint8_t *pData)
+```
+
+MAC protocol is the first protocol layer above the Physical Layer in ad hoc .The primary task of any MAC protocol is to control the access of the nodes to shared medium.
+
+- What Does Serial Port Mean?
+
+A serial port is an interface that allows a PC to transmit or receive data one bit at a time. It is one of the oldest types of interfaces and at one time was commonly used to connect printers and external modems to a PC. Modern serial ports are used in scientific instruments, shop till systems such as cash registers and applications like industrial machinery systems.
+
+Normally, a serial port is a male port, while a parallel port is a female port. System resource configurations are chosen for each port and are identified by COM1, COM2, COM3, COM4, and so forth. Each COM position represents an input/output (I/O) and an interrupt request (IRQ) address. The I/O address transfers and receives data to and from a peripheral device such as a mouse or keyboard.
+
+- https://github.com/ti-simplelink/ble_examples
+
+- https://github.com/ti-simplelink/ble_examples/tree/simplelink_sdk-1.60#examples--demo-list
+
+- icall_ble_api.h
+
+- https://software-dl.ti.com/simplelink/esd/simplelink_cc13x2_26x2_sdk/3.30.00.03/exports/docs/ble5stack/ble_user_guide/html/ble-stack-5.x/the-application.html
+
+- https://software-dl.ti.com/simplelink/esd/simplelink_cc13x2_26x2_sdk/3.30.00.03/exports/docs/ble5stack/ble_user_guide/html/ble-stack-5.x/the-application.html#icall
+
+- https://www.tuner168.com//uploads/soft/161222/3-161222111234.pdf
+
+- https://software-dl.ti.com/lprf/simplelink_cc26x2_latest/docs/ble5stack/ble_user_guide/html/ble-stack-5.x/the-application.html
