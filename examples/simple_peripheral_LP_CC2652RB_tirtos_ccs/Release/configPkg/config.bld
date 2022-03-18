@@ -1,0 +1,24 @@
+/* THIS IS A GENERATED FILE -- DO NOT EDIT */
+
+var target;    /* the target used for this build */
+
+/* configuro was passed the target's name explicitly */
+try {
+    target = xdc.module('ti.targets.arm.elf.M4F');
+}
+catch (e) {
+    throw new Error("Can't find the target named '" + 'ti.targets.arm.elf.M4F'
+                    + "' along the path '" + environment["xdc.path"]
+                    + "': please check the spelling of the target's name and that it exists along this path.");
+}
+if (!(target instanceof xdc.module("xdc.bld.ITarget").Module)) {
+    throw new Error("The module named 'ti.targets.arm.elf.M4F' exists but it's not a target: please check the spelling of the target's name");
+}
+
+/* configuro was passed compiler options explicitly */
+target.ccOpts.prefix = unescape("-mv7M4%20--code_state%3D16%20--float_support%3DFPv4SPD16%20-me%20-O4%20--opt_for_speed%3D0%20--include_path%3D%22C%3A/Users/mariana/workspace_v11/simple_peripheral_LP_CC2652RB_tirtos_ccs%22%20--include_path%3D%22C%3A/Users/mariana/workspace_v11/simple_peripheral_LP_CC2652RB_tirtos_ccs/Release%22%20--include_path%3D%22C%3A/Users/mariana/workspace_v11/simple_peripheral_LP_CC2652RB_tirtos_ccs/Application%22%20--include_path%3D%22C%3A/ti/simplelink_cc13xx_cc26xx_sdk_5_40_00_40/source%22%20--include_path%3D%22C%3A/ti/simplelink_cc13xx_cc26xx_sdk_5_40_00_40/source/ti%22%20--include_path%3D%22C%3A/ti/simplelink_cc13xx_cc26xx_sdk_5_40_00_40/source/ti/ble5stack%22%20--include_path%3D%22C%3A/ti/simplelink_cc13xx_cc26xx_sdk_5_40_00_40/source/ti/ble5stack/controller/cc26xx/inc%22%20--include_path%3D%22C%3A/ti/simplelink_cc13xx_cc26xx_sdk_5_40_00_40/source/ti/ble5stack/inc%22%20--include_path%3D%22C%3A/ti/simplelink_cc13xx_cc26xx_sdk_5_40_00_40/source/ti/ble5stack/rom%22%20--include_path%3D%22C%3A/ti/simplelink_cc13xx_cc26xx_sdk_5_40_00_40/source/ti/ble5stack/common/cc26xx%22%20--include_path%3D%22C%3A/ti/simplelink_cc13xx_cc26xx_sdk_5_40_00_40/source/ti/ble5stack/icall/inc%22%20--include_path%3D%22C%3A/ti/simplelink_cc13xx_cc26xx_sdk_5_40_00_40/source/ti/ble5stack/hal/src/target/_common%22%20--include_path%3D%22C%3A/ti/simplelink_cc13xx_cc26xx_sdk_5_40_00_40/source/ti/ble5stack/hal/src/target/_common/cc26xx%22%20--include_path%3D%22C%3A/ti/simplelink_cc13xx_cc26xx_sdk_5_40_00_40/source/ti/ble5stack/hal/src/inc%22%20--include_path%3D%22C%3A/ti/simplelink_cc13xx_cc26xx_sdk_5_40_00_40/source/ti/ble5stack/heapmgr%22%20--include_path%3D%22C%3A/ti/simplelink_cc13xx_cc26xx_sdk_5_40_00_40/source/ti/ble5stack/profiles/dev_info%22%20--include_path%3D%22C%3A/ti/simplelink_cc13xx_cc26xx_sdk_5_40_00_40/source/ti/ble5stack/profiles/simple_profile%22%20--include_path%3D%22C%3A/ti/simplelink_cc13xx_cc26xx_sdk_5_40_00_40/source/ti/ble5stack/icall/src/inc%22%20--include_path%3D%22C%3A/ti/simplelink_cc13xx_cc26xx_sdk_5_40_00_40/source/ti/ble5stack/osal/src/inc%22%20--include_path%3D%22C%3A/ti/simplelink_cc13xx_cc26xx_sdk_5_40_00_40/source/ti/ble5stack/services/src/saddr%22%20--include_path%3D%22C%3A/ti/simplelink_cc13xx_cc26xx_sdk_5_40_00_40/source/ti/ble5stack/services/src/sdata%22%20--include_path%3D%22C%3A/ti/simplelink_cc13xx_cc26xx_sdk_5_40_00_40/source/ti/common/nv%22%20--include_path%3D%22C%3A/ti/simplelink_cc13xx_cc26xx_sdk_5_40_00_40/source/ti/common/cc26xx%22%20--include_path%3D%22C%3A/ti/simplelink_cc13xx_cc26xx_sdk_5_40_00_40/source/ti/ble5stack/common/cc26xx/rcosc%22%20--include_path%3D%22C%3A/ti/simplelink_cc13xx_cc26xx_sdk_5_40_00_40/source/ti/ble5stack/npi/src%22%20--include_path%3D%22C%3A/ti/simplelink_cc13xx_cc26xx_sdk_5_40_00_40/source/ti/ble5stack/npi/src/inc%22%20--include_path%3D%22C%3A/ti/simplelink_cc13xx_cc26xx_sdk_5_40_00_40/kernel/tirtos/packages%22%20--include_path%3D%22C%3A/ti/simplelink_cc13xx_cc26xx_sdk_5_40_00_40/source/ti/devices/cc13x2_cc26x2%22%20--include_path%3D%22C%3A/ti/simplelink_cc13xx_cc26xx_sdk_5_40_00_40/source/ti/posix/ccs%22%20--include_path%3D%22C%3A/ti/ccs1110/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include%22%20--define%3DDeviceFamily_CC26X2%20--define%3DFLASH_ROM_BUILD%20--define%3DNVOCMP_NWSAMEITEM%3D1%20-g%20--c99%20--gcc%20--diag_warning%3D225%20--diag_warning%3D255%20--diag_wrap%3Doff%20--display_error_number%20--gen_func_subsections%3Don%20--abi%3Deabi%20%20%20") + target.ccOpts.prefix;
+
+/* configuro was passed the target's rootDir explicitly */
+target.rootDir = 'C:/ti/ccs1110/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS';
+
+Build.targets = [target];

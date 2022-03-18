@@ -1,0 +1,96 @@
+/**
+ * These arguments were used when this file was generated. They will be automatically applied on subsequent loads
+ * via the GUI or CLI. Run CLI with '--help' for additional information on how to override these arguments.
+ * @cliArgs --board "/ti/boards/LP_CC2652RB" --rtos "tirtos" --product "simplelink_cc13xx_cc26xx_sdk@5.40.00.40"
+ * @versions {"tool":"1.10.0+2163"}
+ */
+
+/**
+ * Import the modules used in this configuration.
+ */
+const ble         = scripting.addModule("/ti/ble5stack/ble");
+const CCFG        = scripting.addModule("/ti/devices/CCFG");
+const rfdesign    = scripting.addModule("/ti/devices/radioconfig/rfdesign");
+const Display     = scripting.addModule("/ti/display/Display");
+const Display1    = Display.addInstance();
+const AESCCM      = scripting.addModule("/ti/drivers/AESCCM");
+const AESCCM1     = AESCCM.addInstance();
+const AESCTRDRBG  = scripting.addModule("/ti/drivers/AESCTRDRBG");
+const AESCTRDRBG1 = AESCTRDRBG.addInstance();
+const AESECB      = scripting.addModule("/ti/drivers/AESECB");
+const AESECB1     = AESECB.addInstance();
+const ECDH        = scripting.addModule("/ti/drivers/ECDH");
+const ECDH1       = ECDH.addInstance();
+const NVS         = scripting.addModule("/ti/drivers/NVS");
+const NVS1        = NVS.addInstance();
+const PIN         = scripting.addModule("/ti/drivers/PIN");
+const PIN1        = PIN.addInstance();
+const PIN2        = PIN.addInstance();
+const Power       = scripting.addModule("/ti/drivers/Power");
+const RF          = scripting.addModule("/ti/drivers/RF");
+const RTOS        = scripting.addModule("/ti/drivers/RTOS");
+const TRNG        = scripting.addModule("/ti/drivers/TRNG");
+const TRNG1       = TRNG.addInstance();
+
+/**
+ * Write custom configuration values to the imported modules.
+ */
+ble.deviceRole                         = "CENTRAL_CFG";
+ble.lockProject                        = true;
+ble.bondPairing                        = "GAPBOND_PAIRING_MODE_INITIATE";
+ble.disDevBySerUuid                    = true;
+ble.radioConfig.codeExportConfig.$name = "ti_devices_radioconfig_code_export_param0";
+ble.connUpdateParamsCentral.$name      = "ti_ble5stack_general_ble_conn_update_params0";
+
+CCFG.enableBootloader         = true;
+CCFG.enableBootloaderBackdoor = true;
+CCFG.dioBootloaderBackdoor    = 13;
+CCFG.levelBootloaderBackdoor  = "Active low";
+CCFG.srcClkLF                 = "Derived from HF XOSC";
+CCFG.ccfgTemplate.$name       = "ti_devices_CCFGTemplate0";
+
+Display1.$name                                 = "CONFIG_Display_0";
+Display1.$hardware                             = system.deviceData.board.components.XDS110UART;
+Display1.enableANSI                            = true;
+Display1.uartBufferSize                        = 128;
+Display1.useUART2                              = false;
+Display1.uart.$name                            = "CONFIG_DISPLAY_UART";
+Display1.uart.txPinInstance.initialOutputState = "High";
+Display1.uart.txPinInstance.$name              = "CONFIG_PIN_UART_TX";
+Display1.uart.rxPinInstance.$name              = "CONFIG_PIN_UART_RX";
+
+AESCCM1.$name = "Board_AESCCM0";
+
+AESCTRDRBG1.$name              = "CONFIG_AESCTRDRBG_0";
+AESCTRDRBG1.aesctrObject.$name = "CONFIG_AESCTR_0";
+
+AESECB1.$name = "CONFIG_AESECB0";
+
+ECDH1.$name = "CONFIG_ECDH0";
+
+NVS1.$name                    = "CONFIG_NVSINTERNAL";
+NVS1.internalFlash.$name      = "ti_drivers_nvs_NVSCC26XX0";
+NVS1.internalFlash.regionBase = 0x48000;
+NVS1.internalFlash.regionSize = 0x4000;
+
+PIN1.$hardware = system.deviceData.board.components["BTN-1"];
+PIN1.$name     = "CONFIG_GPIO_BTN1";
+
+PIN2.$hardware = system.deviceData.board.components["BTN-2"];
+PIN2.$name     = "CONFIG_GPIO_BTN2";
+
+Power.calibrateRCOSC_LF = false;
+Power.calibrateRCOSC_HF = false;
+
+TRNG1.$name = "CONFIG_TRNG_0";
+
+/**
+ * Pinmux solution for unlocked pins/peripherals. This ensures that minor changes to the automatic solver in a future
+ * version of the tool will not impact the pinmux you originally saw.  These lines can be completely deleted in order to
+ * re-solve from scratch.
+ */
+Display1.uart.uart.$suggestSolution       = "UART1";
+Display1.uart.uart.txPin.$suggestSolution = "boosterpack.4";
+Display1.uart.uart.rxPin.$suggestSolution = "boosterpack.3";
+PIN1.pinPin.$suggestSolution              = "boosterpack.13";
+PIN2.pinPin.$suggestSolution              = "boosterpack.12";
