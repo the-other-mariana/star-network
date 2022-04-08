@@ -1,0 +1,194 @@
+% UQ QOL/EQUS Poster format
+% Forked from: https://www.overleaf.com/project/618cc965bcbc81513871601f
+% Credit: Ali Furkan Kalay
+% See: https://github.com/alfurka/gemini-uq
+% Forked from
+% https://rev.cs.uchicago.edu/k4rtik/gemini-uccs
+% which is forked from
+% https://github.com/anishathalye/gemini
+
+
+\documentclass[final]{beamer}
+
+% ====================
+% Packages
+% ====================
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[orientation=portrait,size=a0,scale=1.0]{beamerposter} % Current dimensions A0, put in your poster dimensions
+\usetheme{gemini}
+\usecolortheme{uchicago}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{booktabs}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.17}
+\newcommand{\blu}{\color{blue}}
+\usepackage{DejaVuSans}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Column environment setup
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% If you have N columns, choose \sepwidth and \colwidth such that
+% (N+1)*\sepwidth + N*\colwidth = \paperwidth
+% Follow structure to create difference column environments. 
+\newlength{\sepwidthA} % Seperation distance between comulumns type A
+\newlength{\colwidthA} % collumn width type A
+\setlength{\sepwidthA}{0.25\paperwidth}
+\setlength{\colwidthA}{0.5\paperwidth}
+
+\newcommand{\separatorcolumnA}{\begin{column}{\sepwidthA}\end{column}}
+
+% Second column environment. 
+\newlength{\sepwidthB}
+\newlength{\colwidthB}
+\setlength{\sepwidthB}{0.0666\paperwidth}
+\setlength{\colwidthB}{0.4\paperwidth}
+
+\newcommand{\separatorcolumnB}{\begin{column}{\sepwidthB}\end{column}}
+
+% You can also use these column commands to create columns inside columns and for creating new column formatting. 
+% You can also have non even columns by creating more column environments or specifying the width when beginning a column environment. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Title
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{\VeryHuge{Modelo de predicción de la tasa de pérdida de \\ 
+paquetes en redes inalámbricas de sensores}}
+\author{Daniel Heráclito Pérez Díaz \and Mariana Ávalos Arce}
+\institute[shortinst]{Universidad Panamericana, Guadalajara, México}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Poster footer
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\footercontent{
+\href{mailto:0190575@up.edu.mx}{0190575@up.edu.mx}
+\href{mailto:0197495@up.edu.mx}{0197495@up.edu.mx} % this is a clickable link
+  \hfill
+  Especialidad en Ciencia de Datos \hfill
+  {Poster Number: \#1} }
+% (can be left out to remove footer)  
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Logo placements (optional)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\addtobeamertemplate{headline}{}
+{
+    %\begin{tikzpicture}[remember picture,overlay] % Solid header bar
+    \begin{tikzpicture}[remember picture,overlay,line width=\arrayrulewidth] % gradient header bar
+      % UQ Reverse Logo 
+      \node [anchor=north west, inner sep=3cm] at ([xshift=0cm,yshift=1.0cm]current page.north west)
+      {\includegraphics[height=8cm]{logos/upwhite02.png}}; 
+      % Logo 1, replace with custom logo
+      \node [anchor=north east, inner sep=3cm] at ([xshift=0.0cm,yshift=2.0cm]current page.north east)
+      {\includegraphics[height=8.0cm]{logos/tree.png}}; 
+      % Extra logo 2
+      %\node [anchor=north east, inner sep=3cm] at ([xshift=1.0cm,yshift=-10.0cm]current page.north east)
+      %{\includegraphics[height=6.0cm]{logos/UQlockup-Purple-cmyk.eps}};
+      %  Extra logo 3, or a QR Code
+      \node [anchor=north west, inner sep=3cm] at ([xshift=-1.0cm,yshift=-13.0cm]current page.north west)
+      {\includegraphics[height=7.0cm]{logos/qr-code.png}}; 
+    \end{tikzpicture}
+}
+
+% ====================
+% Body
+% ====================
+
+\begin{frame}[t]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Section 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{columns}[t]
+    \separatorcolumnA
+    \begin{column}{\colwidthA}
+
+        \begin{block}{Propuesta de la topología de red}
+            \begin{figure}[!Ht]
+            \centering
+                \includegraphics[width=\linewidth]{Figures/NetworkDistribution_EM2022.png}
+                \caption{Topología de Red.}
+                \label{fig:top}
+            \end{figure}
+        \end{block}
+    
+    \end{column}
+
+    \separatorcolumnA
+\end{columns}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Section 2 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{columns}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Section 2 column 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\separatorcolumnB
+
+    \begin{column}[T]{\colwidthB}
+
+        \begin{block}{Metodología para encontrar la tendencia en los datos}
+
+        \begin{figure}[!Ht]
+            \centering
+                \includegraphics[width=\linewidth]{Figures/pipeline.png}
+                \caption{Esquema de la metodología a utilizar.}
+                \label{fig:pipe}
+        \end{figure}
+    \end{block}
+    
+    \begin{block}{Hardware}
+        El equipo o hardware que formarán la red a analizar está formado por placas de evaluación de la compañía Texas Instruments:
+
+        \begin{figure}[!Ht]
+            \centering
+                \includegraphics[width=\linewidth]{Figures/hardware.png}
+                \caption{Hardware de Texas Instruments.}
+                \label{fig:hw}
+        \end{figure}
+    \end{block}
+
+    \begin{alertblock}{La Red}
+        Los protocolos implementados por la red están basados en el estándar IEEE 802.15.4.
+    \end{alertblock}
+        
+\end{column}
+\separatorcolumnB
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Section 2 column 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{column}[T]{\colwidthB}
+
+    \begin{block}{Aplicaciones}
+    Un desarrollo de IoT (Internet of Things) son las Ciudades Inteligentes o Smart Cities, donde éstas se definen como la mejora de la calidad de vida de los ciudadanos a través del uso de hardware, software, redes y datos. La pregunta que el modelo de predicción de la presente propuesta respondería sería principalmente si en una Smart City, cuya red presenta pérdida de paquetes, requiere de más routers o simplemente un reacomodo de sus nodos, a partir de la interferencia que presenta.
+
+        \begin{figure}[!Ht]
+            \centering
+                \includegraphics[width=\linewidth]{Figures/smart-city-app.png}
+                \caption{Smart City.}
+                \label{fig:app}
+        \end{figure}
+    \end{block}
+
+  
+
+    
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% References
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{block}{Referencias}
+
+\nocite{*}
+\bibliography{poster}% Produces the bibliography via BibTeX.
+\bibliographystyle{plain}
+\end{block} 
+
+\end{column}
+\separatorcolumnB
+\end{columns}
+\end{frame}
+\end{document}

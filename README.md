@@ -1,3 +1,5 @@
+![img](misc/poster/imgs/NetworkDistribution_EM2022.png)
+
 # Star Network System
 
 A system that connects Texas Instruments' CC2652RB microcontrollers as nodes of a star-shaped network.
