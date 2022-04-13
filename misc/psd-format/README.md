@@ -86,3 +86,5 @@ The timestamp on the first packet will be used as offset value for all packets: 
 - TI Packet Sniffer Manual: https://www.ti.com/lit/ug/swru187g/swru187g.pdf?ts=1649867575476&ref_url=https%253A%252F%252Fwww.google.com%252F
 
 - FCS Details: https://github.com/homewsn/whsniff/blob/master/src/whsniff.c
+
+- Convert little endian: https://stackoverflow.com/questions/1698036/convert-little-endian-string-to-integer
