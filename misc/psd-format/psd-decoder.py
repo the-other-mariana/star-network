@@ -7,6 +7,8 @@ s = ""
 c = 0
 p = 1
 
+CLOCK = 32
+
 NUM = 4
 TS = 8
 LEN = 2
@@ -66,7 +68,9 @@ while mybyte:
     if p > 5 and p <= 13:
         pckt_ts.append(mybyte)
         if p == 13:
-            s += f"TIME({TS}): {pckt_ts}\n"
+            b = b''.join(pckt_ts)
+            value = (int.from_bytes(b, byteorder='little')) / CLOCK
+            s += f"TIME({TS}): {pckt_ts} = {value} micro(s)\n"
             pckt_len = []
         mybyte = file.read(1)
         p += 1
@@ -74,7 +78,10 @@ while mybyte:
     if p > 13 and p <= 15:
         pckt_len.append(mybyte)
         if p == 15:
-            s += f"LEN({LEN}): {pckt_len}\n"
+            b = b''.join(pckt_len)
+            # length value includes the status bytes (2) if bit0 = 1 from packt info
+            value = int.from_bytes(b, byteorder='little')
+            s += f"LEN({LEN}): {pckt_len} = {value}\n"
             pckt_payload = []
         mybyte = file.read(1)
         p += 1
@@ -87,7 +94,20 @@ while mybyte:
     if p > 16 and p <= (16 + N):
         pckt_payload.append(mybyte)
         if p == (16 + N):
-            s += f"PAYLOAD({N+1}): {pckt_payload}\n"
+            s += f"PAYLOAD({N}): {pckt_payload}\n"
+
+            # rssi included in length: rssi included in payload (BYTE 1)
+            rssi = int.from_bytes(pckt_payload[-2], byteorder='little', signed=True)
+            s += f"RSSI(BYTE 1): {rssi}\n"
+
+            # crc ok included in length: (BYTE 2, bit7)
+            binary_string = "{:08b}".format(int(pckt_payload[-1].hex(), 16))
+            inv = binary_string[::-1]
+            bit7 = inv[-1] # last bit or bit7
+            ok = "1"
+            if bit7 == '0':
+                ok = "0"
+            s += f"CRC OK (BYTE 2, bit7): {ok}\n"
             pckt_status = []
         mybyte = file.read(1)
         p += 1

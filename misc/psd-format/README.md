@@ -88,3 +88,5 @@ The timestamp on the first packet will be used as offset value for all packets: 
 - FCS Details: https://github.com/homewsn/whsniff/blob/master/src/whsniff.c
 
 - Convert little endian: https://stackoverflow.com/questions/1698036/convert-little-endian-string-to-integer
+
+- Bytes to int python (little): https://stackoverflow.com/questions/57325964/how-do-i-convert-a-byte-to-an-integer-in-python-when-it-has-the-byte-markers-att
