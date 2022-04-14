@@ -1,3 +1,5 @@
+import bitstring
+from struct import pack, unpack
 
 filename = 'RegistroPrueba_120422.psd'
 file = open(filename,'rb')
@@ -26,7 +28,9 @@ pckt_status = []
 pckt_spare = []
 N = 1
 
-# 11 = 65, 9 = 60, 10 = 63 (LQI)
+# 11 9 9 11 10
+# 11(+54) = 65, 9(+51) = 60, 10+(53) = 63 (LQI)
+# 11(-73) = -62, 9(-73) = -64, 10(-73) = -63 (RSSI)
 
 while mybyte:
     if c == 5: break

@@ -97,3 +97,11 @@ The timestamp on the first packet will be used as offset value for all packets: 
 
 - For a single-hop network, RSSI may be used for LQI: https://microchipsupport.force.com/s/article/RSSI-vs-LQI-What-is-the-difference
 
+- RSSI to LQI?: 
+
+    - https://community.silabs.com/s/article/can-i-convert-lqi-values-from-the-stack-to-rssi-values-or-vice-versa-x?language=en_US
+
+    - https://community.silabs.com/s/question/0D51M00007xeG3cSAE/lqi-and-rssi?language=es
+
+- signed int from byte: https://stackoverflow.com/questions/17067813/convert-ascii-character-to-signed-8-bit-integer-python
+
