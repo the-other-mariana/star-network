@@ -87,6 +87,13 @@ The timestamp on the first packet will be used as offset value for all packets: 
 
 - FCS Details: https://github.com/homewsn/whsniff/blob/master/src/whsniff.c
 
+    - libusb: https://github.com/libusb/libusb/blob/master/libusb/libusb.h
+
+    - endian.h: https://github.com/lattera/glibc/blob/master/string/endian.h
+
 - Convert little endian: https://stackoverflow.com/questions/1698036/convert-little-endian-string-to-integer
 
 - Bytes to int python (little): https://stackoverflow.com/questions/57325964/how-do-i-convert-a-byte-to-an-integer-in-python-when-it-has-the-byte-markers-att
+
+- For a single-hop network, RSSI may be used for LQI: https://microchipsupport.force.com/s/article/RSSI-vs-LQI-What-is-the-difference
+
