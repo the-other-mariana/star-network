@@ -97,9 +97,9 @@ while mybyte:
         mybyte = file.read(1)
         p += 1
     # remaining bytes: SPARE
-    if p > (16 + N + 2) and p <= (136 - (N + 2 + 1)):
+    if p > (16 + N + 2) and p <= (136+15):
         pckt_spare.append(mybyte)
-        if p == (136 - (N + 2 + 1)):
+        if p == (136+15):
             s += f"SPARE({ (136 - (N + 2 + 1)) }): {pckt_spare}\n"
             p = 1
             starting = True
