@@ -6,6 +6,12 @@ mybyte = file.read(1)
 s = ""
 c = 0
 p = 1
+
+NUM = 4
+TS = 8
+LEN = 2
+STATUS = 2
+
 starting = True
 pckt_num = []
 pckt_ts = []
@@ -13,8 +19,9 @@ pckt_len = []
 pckt_payload = []
 pckt_status = []
 pckt_spare = []
+N = 1
 while mybyte:
-    if c == 100: break
+    if c == 5: break
     # first byte: PACKET INFO
     if p == 1:
         s += "PInfo\n"
@@ -47,7 +54,7 @@ while mybyte:
     if p > 1 and p <= 5:
         pckt_num.append(mybyte)
         if p == 5:
-            s += f"NUM: {pckt_num}\n"
+            s += f"NUM({NUM}): {pckt_num}\n"
             pckt_ts = []
         mybyte = file.read(1)
         p += 1
@@ -56,7 +63,7 @@ while mybyte:
     if p > 5 and p <= 13:
         pckt_ts.append(mybyte)
         if p == 13:
-            s += f"TIME: {pckt_ts}\n"
+            s += f"TIME({TS}): {pckt_ts}\n"
             pckt_len = []
         mybyte = file.read(1)
         p += 1
@@ -64,7 +71,7 @@ while mybyte:
     if p > 13 and p <= 15:
         pckt_len.append(mybyte)
         if p == 15:
-            s += f"LEN: {pckt_len}\n"
+            s += f"LEN({LEN}): {pckt_len}\n"
             pckt_payload = []
         mybyte = file.read(1)
         p += 1
@@ -77,7 +84,7 @@ while mybyte:
     if p > 16 and p <= (16 + N):
         pckt_payload.append(mybyte)
         if p == (16 + N):
-            s += f"PAYLOAD: {pckt_payload}\n"
+            s += f"PAYLOAD({N+1}): {pckt_payload}\n"
             pckt_status = []
         mybyte = file.read(1)
         p += 1
@@ -85,17 +92,30 @@ while mybyte:
     if p > (16 + N) and p <= (16 + N + 2):
         pckt_status.append(mybyte)
         if p == (16 + N + 2):
-            s += f"STATUS: [RSSI: {pckt_status[0]}, CORR/LQI: {pckt_status[1]}]\n"
+            s += f"STATUS({STATUS}): [RSSI: {pckt_status[0]}, CORR/LQI: {pckt_status[1]}]\n"
             pckt_spare = []
         mybyte = file.read(1)
         p += 1
-    if p >
-
-
+    # remaining bytes: SPARE
+    if p > (16 + N + 2) and p <= (136 - (N + 2 + 1)):
+        pckt_spare.append(mybyte)
+        if p == (136 - (N + 2 + 1)):
+            s += f"SPARE({ (136 - (N + 2 + 1)) }): {pckt_spare}\n"
+            p = 1
+            starting = True
+            pckt_num = []
+            pckt_ts = []
+            pckt_len = []
+            pckt_payload = []
+            pckt_status = []
+            pckt_spare = []
+            mybyte = file.read(1)
+            N = 1
+            c += 1
+            continue
+        mybyte = file.read(1)
+        p += 1
     #s += f"hex: {h} = {value}\n"
-
-    mybyte = file.read(1)
-    c+=1
 
 f = open("decimal.txt", "a")
 f.write(s)
