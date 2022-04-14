@@ -24,7 +24,8 @@ while mybyte:
     if c == 5: break
     # first byte: PACKET INFO
     if p == 1:
-        s += "PInfo\n"
+        s += "================\n"
+        s += "PCKT INFO\n"
         binary_string = "{:08b}".format(int(mybyte.hex(), 16))
         inv = binary_string[::-1]
         used_bits = inv[:4]
@@ -54,7 +55,9 @@ while mybyte:
     if p > 1 and p <= 5:
         pckt_num.append(mybyte)
         if p == 5:
-            s += f"NUM({NUM}): {pckt_num}\n"
+            b = b''.join(pckt_num)
+            value = int.from_bytes(b, byteorder='little')
+            s += f"PCKT NUM({NUM}): {pckt_num} = {value}\n"
             pckt_ts = []
         mybyte = file.read(1)
         p += 1
