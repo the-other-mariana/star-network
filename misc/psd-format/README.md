@@ -105,3 +105,17 @@ The timestamp on the first packet will be used as offset value for all packets: 
 
 - signed int from byte: https://stackoverflow.com/questions/17067813/convert-ascii-character-to-signed-8-bit-integer-python
 
+- Binary representation
+
+```
+0x0000000B = 00000000 00000000 00000000 00001011
+0x0B = 00000000 00001011
+```
+
+By having 2 spaces after `x`, that means the numbers are stored using 2 bytes (16 bits).
+
+https://www.binaryconvert.com/result_signed_int.html?decimal=049049
+
+complement: https://www.allaboutcircuits.com/textbook/digital/chpt-2/negative-binary-numbers/
+
+

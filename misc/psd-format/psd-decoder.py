@@ -1,5 +1,4 @@
-import bitstring
-from struct import pack, unpack
+import numpy as np
 
 filename = 'RegistroPrueba_120422.psd'
 file = open(filename,'rb')
@@ -106,6 +105,18 @@ while mybyte:
         pckt_payload.append(mybyte)
         if p == ((((1 + NUM) + TS) + LEN + 1) + N): # (16 + N)
             s += f"PAYLOAD({N}): {pckt_payload}\n"
+
+            # Dest PAN (3,4), DEST (5,6), SOURCE (7,8)
+            if len(pckt_payload) > 5:
+                pan = b''.join([pckt_payload[4], pckt_payload[3]])
+                dest = b''.join([pckt_payload[6], pckt_payload[5]])
+                src = b''.join([pckt_payload[8], pckt_payload[7]])
+                s += f"\tPAN: {pan}\n\tDEST: {dest}\n\tSRC: {src}\n"
+
+            ba = bytearray(pckt_payload[-2])
+            arr = np.ndarray(shape=(1,), dtype='<i1', buffer=ba) # < = little endian, i1 = signed 1 byte integer
+            bs = "{:08b}".format(int(pckt_payload[-2].hex(), 16))
+            # print(bs)
 
             # rssi included in length: rssi included in payload (BYTE 1)
             rssi = int.from_bytes(pckt_payload[-2], byteorder='little', signed=True)
