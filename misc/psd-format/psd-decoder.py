@@ -106,7 +106,7 @@ while mybyte:
         if p == ((((1 + NUM) + TS) + LEN + 1) + N): # (16 + N)
             s += f"PAYLOAD({N}): {pckt_payload}\n"
 
-            # Dest PAN (3,4), DEST (5,6), SOURCE (7,8)
+            # NON BROADCAST MSG: Dest PAN (3,4), DEST (5,6), SOURCE (7,8)
             if len(pckt_payload) > 5:
                 pan = b''.join([pckt_payload[4], pckt_payload[3]])
                 dest = b''.join([pckt_payload[6], pckt_payload[5]])
