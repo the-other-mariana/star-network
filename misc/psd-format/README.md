@@ -87,7 +87,7 @@ From an example psd file, after the Length field we can see the Frame Control Fi
 
 ![img](5.PNG)
 
-In the psd file format, the Frame Control Field (FCF) is organized as follows:
+In the psd file format, the Frame Control Field (FCF) can be found on the first byte of the PAYLOAD and is organized as follows:
 
 - Bit 0 - 2: TYPE. The available type codes are:
 
@@ -126,7 +126,7 @@ which would output:
 '011'
 ```
 
-To get `011` (CMD), we delete bit7 (`0`), take bits[:3] (`110`) and invert them.
+To get `011` (CMD), we delete `bits[7]` (`0`), take `bits[:3]` (`110`) and invert them. In this way, we achieve the FCF of the first packet in the above sample image of a psd file.
 
 ## References
 

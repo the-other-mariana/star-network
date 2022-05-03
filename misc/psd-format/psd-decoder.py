@@ -1,4 +1,5 @@
 import numpy as np
+from fcf_type_codes import TYPES as fcft
 
 filename = 'RegistroPrueba_120422.psd'
 file = open(filename,'rb')
@@ -111,7 +112,7 @@ while mybyte:
             # Bit0-2: TYPE (invert)
             fcf_type = binary_string[:3][::-1]
             # CMD or DATA TYPE: Dest PAN (3,4), DEST (5,6), SOURCE (7,8)
-            if fcf_type == '011' or fcf_type == '001':
+            if fcf_type == fcft['CMD'] or fcf_type == fcft['DATA']:
                 pan = b''.join([pckt_payload[4], pckt_payload[3]])
                 dest = b''.join([pckt_payload[6], pckt_payload[5]])
                 src = b''.join([pckt_payload[8], pckt_payload[7]])
