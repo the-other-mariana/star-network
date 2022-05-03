@@ -1,7 +1,7 @@
 import numpy as np
 from fcf_type_codes import TYPES as fcft
 
-filename = 'RegistroPrueba_120422.psd'
+filename = 'tests/TestControl_150422.psd'
 file = open(filename,'rb')
 mybyte = file.read(1)
 
@@ -33,7 +33,7 @@ N = 1
 # 11(-73) = -62, 9(-73) = -64, 10(-73) = -63 (RSSI)
 
 while mybyte:
-    if c == 5: break
+    if c == 10: break
     # first byte: PACKET INFO
     if p == 1:
         s += "================\n"
@@ -111,12 +111,32 @@ while mybyte:
             # frame control field
             # Bit0-2: TYPE (invert)
             fcf_type = binary_string[:3][::-1]
+            '''
             # CMD or DATA TYPE: Dest PAN (3,4), DEST (5,6), SOURCE (7,8)
             if fcf_type == fcft['CMD'] or fcf_type == fcft['DATA']:
                 pan = b''.join([pckt_payload[4], pckt_payload[3]])
                 dest = b''.join([pckt_payload[6], pckt_payload[5]])
                 src = b''.join([pckt_payload[8], pckt_payload[7]])
                 s += f"\tPAN: {pan}\n\tDEST: {dest}\n\tSRC: {src}\n"
+            '''
+            # type CMD: 5 lengths: 10, 21, 18, 27, 12 # TODO
+            if fcf_type == fcft['CMD'] and len(pckt_payload) == 10:
+                dest_pan = b''.join([pckt_payload[4], pckt_payload[3]])
+                dest_add = b''.join([pckt_payload[6], pckt_payload[5]])
+                s += f"\tDest PAN: {dest_pan}\n\tDest Add: {dest_add}\n"
+            if fcf_type == fcft['CMD'] and len(pckt_payload) == 21:
+                dest_pan = b''.join([pckt_payload[4], pckt_payload[3]])
+                dest_add = b''.join([pckt_payload[6], pckt_payload[5]])
+                src_pan = b''.join([pckt_payload[8], pckt_payload[7]])
+                src_add = b''.join(pckt_payload[9:(9 + 8)][::-1])
+                s += f"\tDest PAN: {dest_pan}\n\tDest Add: {dest_add}\n\tSrc PAN: {src_pan}\n\tSrc Add: {src_add}\n"
+                print()
+            if fcf_type == fcft['CMD'] and len(pckt_payload) == 18:
+                print()
+            if fcf_type == fcft['CMD'] and len(pckt_payload) == 27:
+                print()
+            if fcf_type == fcft['CMD'] and len(pckt_payload) == 12:
+                print()
 
             ba = bytearray(pckt_payload[-2])
             arr = np.ndarray(shape=(1,), dtype='<i1', buffer=ba) # < = little endian, i1 = signed 1 byte integer
