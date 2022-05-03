@@ -81,6 +81,53 @@ The timestamp on the first packet will be used as offset value for all packets: 
 
 - TI SmartRF Packet Sniffer install directory: `C:\Program Files (x86)\Texas Instruments\SmartRF Tools\Packet Sniffer\scripts`
 
+## Frame Control Field
+
+From an example psd file, after the Length field we can see the Frame Control Field:
+
+![img](5.PNG)
+
+In the psd file format, the Frame Control Field (FCF) is organized as follows:
+
+- Bit 0 - 2: TYPE. The available type codes are:
+
+    ![img](6.PNG)
+
+    - These were taken from: [pdf file](papers/1GP105_1E_Generation_of_IEEE_802154_Signals.pdf), p 50.
+
+- Bit 3: Security Enabled
+
+- Bit 4: Frame Pending
+
+- Bit 5: ACK Request
+
+- Bit 6: PAN ID Compression
+
+- Bit 7: Reserved
+
+This was taken from: [pdf file](papers/Huang2015_Chapter_AnalysisAndComparisonOfTheIEEE.pdf), p 3.
+
+As we read the file by bytes, we can get the type of field as:
+
+```python
+# inverted (little endian) binary form of byte: payload[0]
+binary_string = "{:08b}".format(int(pckt_payload[0].hex(), 16))[::-1]
+print(binary_string)
+# inverted (little endian) fcf type code
+fcf_type = binary_string[:3][::-1]
+print(fcf_type)
+```
+
+which would output:
+
+```python
+>>>  pckt_payload[0] = b'c'
+'11000110'
+'011'
+```
+
+To get `011` (CMD), we delete bit7 (`0`), take bits[:3] (`110`) and invert them.
+
 ## References
 
 - TI Packet Sniffer Manual: https://www.ti.com/lit/ug/swru187g/swru187g.pdf?ts=1649867575476&ref_url=https%253A%252F%252Fwww.google.com%252F

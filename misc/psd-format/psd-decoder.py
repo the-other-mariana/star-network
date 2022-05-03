@@ -106,8 +106,12 @@ while mybyte:
         if p == ((((1 + NUM) + TS) + LEN + 1) + N): # (16 + N)
             s += f"PAYLOAD({N}): {pckt_payload}\n"
 
-            # NON BROADCAST MSG: Dest PAN (3,4), DEST (5,6), SOURCE (7,8)
-            if len(pckt_payload) > 5:
+            binary_string = "{:08b}".format(int(pckt_payload[0].hex(), 16))[::-1]
+            # frame control field
+            # Bit0-2: TYPE (invert)
+            fcf_type = binary_string[:3][::-1]
+            # CMD or DATA TYPE: Dest PAN (3,4), DEST (5,6), SOURCE (7,8)
+            if fcf_type == '011' or fcf_type == '001':
                 pan = b''.join([pckt_payload[4], pckt_payload[3]])
                 dest = b''.join([pckt_payload[6], pckt_payload[5]])
                 src = b''.join([pckt_payload[8], pckt_payload[7]])
