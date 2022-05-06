@@ -111,41 +111,60 @@ while mybyte:
             # frame control field
             # Bit0-2: TYPE (invert)
             fcf_type = binary_string[:3][::-1]
-            '''
-            # CMD or DATA TYPE: Dest PAN (3,4), DEST (5,6), SOURCE (7,8)
-            if fcf_type == fcft['CMD'] or fcf_type == fcft['DATA']:
-                pan = b''.join([pckt_payload[4], pckt_payload[3]])
-                dest = b''.join([pckt_payload[6], pckt_payload[5]])
-                src = b''.join([pckt_payload[8], pckt_payload[7]])
-                s += f"\tPAN: {pan}\n\tDEST: {dest}\n\tSRC: {src}\n"
-            '''
-            # type CMD: 5 lengths: 10, 21, 18, 27, 12 # TODO
-            if fcf_type == fcft['CMD'] and len(pckt_payload) == 10:
-                dest_pan = b''.join([pckt_payload[4], pckt_payload[3]])
-                dest_add = b''.join([pckt_payload[6], pckt_payload[5]])
-                s += f"\tDest PAN: {dest_pan}\n\tDest Add: {dest_add}\n"
-            if fcf_type == fcft['CMD'] and len(pckt_payload) == 21:
-                dest_pan = b''.join([pckt_payload[4], pckt_payload[3]])
-                dest_add = b''.join([pckt_payload[6], pckt_payload[5]])
-                src_pan = b''.join([pckt_payload[8], pckt_payload[7]])
-                src_add = b''.join(pckt_payload[9:(9 + 8)][::-1])
-                s += f"\tDest PAN: {dest_pan}\n\tDest Add: {dest_add}\n\tSrc PAN: {src_pan}\n\tSrc Add: {src_add}\n"
-                print()
-            if fcf_type == fcft['CMD'] and len(pckt_payload) == 18:
-                print()
-            if fcf_type == fcft['CMD'] and len(pckt_payload) == 27:
-                print()
-            if fcf_type == fcft['CMD'] and len(pckt_payload) == 12:
-                print()
+            # type CMD: 5 lengths: 10, 21, 18, 27, 12
+            if fcf_type == fcft['CMD']:
+                if len(pckt_payload) == 10:
+                    dest_pan = b''.join([pckt_payload[4], pckt_payload[3]])
+                    dest_add = b''.join([pckt_payload[6], pckt_payload[5]])
+                    s += f"\tDest PAN: {dest_pan}\n\tDest Add: {dest_add}\n"
+                elif len(pckt_payload) == 21:
+                    dest_pan = b''.join([pckt_payload[4], pckt_payload[3]])
+                    dest_add = b''.join([pckt_payload[6], pckt_payload[5]])
+                    src_pan = b''.join([pckt_payload[8], pckt_payload[7]])
+                    src_add = b''.join(pckt_payload[9:(9 + 8)][::-1])
+                    s += f"\tDest PAN: {dest_pan}\n\tDest Add: {dest_add}\n\tSrc PAN: {src_pan}\n\tSrc Add: {src_add}\n"
+                elif len(pckt_payload) == 18:
+                    dest_pan = b''.join([pckt_payload[4], pckt_payload[3]])
+                    dest_add = b''.join([pckt_payload[6], pckt_payload[5]])
+                    src_add = b''.join(pckt_payload[7:(7 + 8)][::-1])
+                    s += f"\tDest PAN: {dest_pan}\n\tDest Add: {dest_add}\n\tSrc Add: {src_add}\n"
+                elif len(pckt_payload) == 27:
+                    dest_pan = b''.join([pckt_payload[4], pckt_payload[3]])
+                    dest_add = b''.join(pckt_payload[5:(5 + 8)][::-1])
+                    src_add = b''.join(pckt_payload[((5 + 8) + 1):((5 + 8) + 1 + 8)][::-1])
+                    s += f"\tDest PAN: {dest_pan}\n\tDest Add: {dest_add}\n\tSrc Add: {src_add}\n"
+                elif len(pckt_payload) == 12:
+                    dest_pan = b''.join([pckt_payload[4], pckt_payload[3]])
+                    dest_add = b''.join([pckt_payload[6], pckt_payload[5]])
+                    src_add = b''.join([pckt_payload[8], pckt_payload[7]])
+                    s += f"\tDest PAN: {dest_pan}\n\tDest Add: {dest_add}\n\tSrc Add: {src_add}\n"
+                else:
+                    s += f"CMD packet with unexpected length\n"
+            # type BCN: 3 lengths: 13, 21, 23 (same fields)
+            if fcf_type == fcft['BCN']:
+                if len(pckt_payload) == 13 or len(pckt_payload) == 21 or len(pckt_payload) == 23:
+                    src_pan = b''.join([pckt_payload[4], pckt_payload[3]])
+                    src_add = b''.join([pckt_payload[6], pckt_payload[5]])
+                    s += f"\tSrc PAN: {src_pan}\n\tSrc Add: {src_add}\n"
+                else:
+                    s += f"BCN packet with unexpected length\n"
+            # type ACK: 1 length: 5
+            if fcf_type == fcft['ACK']:
+                if len(pckt_payload) == 5:
+                    # no fields with addresses
+                    pass
+                else:
+                    s += f"ACK packet with unexpected length\n"
 
+            # failed tests for rssi (?)
             ba = bytearray(pckt_payload[-2])
             arr = np.ndarray(shape=(1,), dtype='<i1', buffer=ba) # < = little endian, i1 = signed 1 byte integer
             bs = "{:08b}".format(int(pckt_payload[-2].hex(), 16))
             # print(bs)
 
-            # rssi included in length: rssi included in payload (BYTE 1)
+            # rssi included in length: rssi included in payload (BYTE 1) MUST SUBSTRACT 73
             rssi = int.from_bytes(pckt_payload[-2], byteorder='little', signed=True)
-            s += f"RSSI(BYTE 1): {rssi}\n"
+            s += f"RSSI(BYTE 1): {(rssi - 73)}\n"
 
             # crc ok included in length: (BYTE 2, bit7)
             binary_string = "{:08b}".format(int(pckt_payload[-1].hex(), 16))
