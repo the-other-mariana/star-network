@@ -12,6 +12,7 @@ p = 1
 # CC2531EMK CLOCK
 CLOCK = 32
 
+LONG_LENGTH = 8
 NUM = 4
 TS = 8
 LEN = 2
@@ -116,28 +117,28 @@ while mybyte:
                 if len(pckt_payload) == 10:
                     dest_pan = b''.join([pckt_payload[4], pckt_payload[3]])
                     dest_add = b''.join([pckt_payload[6], pckt_payload[5]])
-                    s += f"\tDest PAN: {dest_pan}\n\tDest Add: {dest_add}\n"
+                    s += f"\tDest PAN: {'0x' + dest_pan.hex()}\n\tDest Add: {'0x' + dest_add.hex()}\n"
                 elif len(pckt_payload) == 21:
                     dest_pan = b''.join([pckt_payload[4], pckt_payload[3]])
                     dest_add = b''.join([pckt_payload[6], pckt_payload[5]])
                     src_pan = b''.join([pckt_payload[8], pckt_payload[7]])
-                    src_add = b''.join(pckt_payload[9:(9 + 8)][::-1])
-                    s += f"\tDest PAN: {dest_pan}\n\tDest Add: {dest_add}\n\tSrc PAN: {src_pan}\n\tSrc Add: {src_add}\n"
+                    src_add = b''.join(pckt_payload[9:(9 + LONG_LENGTH)][::-1])
+                    s += f"\tDest PAN: {'0x' + dest_pan.hex()}\n\tDest Add: {'0x' + dest_add.hex()}\n\tSrc PAN: {'0x' + src_pan.hex()}\n\tSrc Add: {'0x' + src_add.hex()}\n"
                 elif len(pckt_payload) == 18:
                     dest_pan = b''.join([pckt_payload[4], pckt_payload[3]])
                     dest_add = b''.join([pckt_payload[6], pckt_payload[5]])
-                    src_add = b''.join(pckt_payload[7:(7 + 8)][::-1])
-                    s += f"\tDest PAN: {dest_pan}\n\tDest Add: {dest_add}\n\tSrc Add: {src_add}\n"
+                    src_add = b''.join(pckt_payload[7:(7 + LONG_LENGTH)][::-1])
+                    s += f"\tDest PAN: {'0x' + dest_pan.hex()}\n\tDest Add: {'0x' + dest_add.hex()}\n\tSrc Add: {'0x' + src_add.hex()}\n"
                 elif len(pckt_payload) == 27:
                     dest_pan = b''.join([pckt_payload[4], pckt_payload[3]])
-                    dest_add = b''.join(pckt_payload[5:(5 + 8)][::-1])
-                    src_add = b''.join(pckt_payload[((5 + 8) + 1):((5 + 8) + 1 + 8)][::-1])
-                    s += f"\tDest PAN: {dest_pan}\n\tDest Add: {dest_add}\n\tSrc Add: {src_add}\n"
+                    dest_add = b''.join(pckt_payload[5:(5 + LONG_LENGTH)][::-1])
+                    src_add = b''.join(pckt_payload[((5 + LONG_LENGTH) + 1):((5 + LONG_LENGTH) + 1 + LONG_LENGTH)][::-1])
+                    s += f"\tDest PAN: {'0x' + dest_pan.hex()}\n\tDest Add: {'0x' + dest_add.hex()}\n\tSrc Add: {'0x' + src_add.hex()}\n"
                 elif len(pckt_payload) == 12:
                     dest_pan = b''.join([pckt_payload[4], pckt_payload[3]])
                     dest_add = b''.join([pckt_payload[6], pckt_payload[5]])
                     src_add = b''.join([pckt_payload[8], pckt_payload[7]])
-                    s += f"\tDest PAN: {dest_pan}\n\tDest Add: {dest_add}\n\tSrc Add: {src_add}\n"
+                    s += f"\tDest PAN: {'0x' + dest_pan.hex()}\n\tDest Add: {'0x' + dest_add.hex()}\n\tSrc Add: {'0x' + src_add.hex()}\n"
                 else:
                     s += f"CMD packet with unexpected length\n"
             # type BCN: 3 lengths: 13, 21, 23 (same fields)
@@ -145,7 +146,7 @@ while mybyte:
                 if len(pckt_payload) == 13 or len(pckt_payload) == 21 or len(pckt_payload) == 23:
                     src_pan = b''.join([pckt_payload[4], pckt_payload[3]])
                     src_add = b''.join([pckt_payload[6], pckt_payload[5]])
-                    s += f"\tSrc PAN: {src_pan}\n\tSrc Add: {src_add}\n"
+                    s += f"\tSrc PAN: {'0x' + src_pan.hex()}\n\tSrc Add: {'0x' + src_add.hex()}\n"
                 else:
                     s += f"BCN packet with unexpected length\n"
             # type ACK: 1 length: 5

@@ -5,8 +5,8 @@ PCKT NUM(4): [b'\x01', b'\x00', b'\x00', b'\x00'] = 1
 TIME(8): [b'\xe2', b'\xbd', b'\xa8', b'\x16', b'\x00', b'\x00', b'\x00', b'\x00'] = 11879919.0625 micro(s)
 LEN(2): [b'\x0b', b'\x00'] = 11
 PAYLOAD(10): [b'\x03', b'\x08', b'\xb2', b'\xff', b'\xff', b'\xff', b'\xff', b'\x07', b'\xe7', b'\xe3']
-	Dest PAN: b'\xff\xff'
-	Dest Add: b'\xff\xff'
+	Dest PAN: 0xffff
+	Dest Add: 0xffff
 RSSI(BYTE 1): -98
 CRC OK (BYTE 2, bit7): 1
 STATUS(2): [RSSI: b'\x00', CORR/LQI: b'\x00']
@@ -18,8 +18,8 @@ PCKT NUM(4): [b'\x02', b'\x00', b'\x00', b'\x00'] = 2
 TIME(8): [b'\xae', b'\x07', b'\x9c', b'6', b'\x00', b'\x00', b'\x00', b'\x00'] = 28631101.4375 micro(s)
 LEN(2): [b'\x0b', b'\x00'] = 11
 PAYLOAD(10): [b'\x03', b'\x08', b'\x05', b'\xff', b'\xff', b'\xff', b'\xff', b'\x07', b'\xe6', b'\xe3']
-	Dest PAN: b'\xff\xff'
-	Dest Add: b'\xff\xff'
+	Dest PAN: 0xffff
+	Dest Add: 0xffff
 RSSI(BYTE 1): -99
 CRC OK (BYTE 2, bit7): 1
 STATUS(2): [RSSI: b'\x00', CORR/LQI: b'\x00']
@@ -31,8 +31,8 @@ PCKT NUM(4): [b'\x03', b'\x00', b'\x00', b'\x00'] = 3
 TIME(8): [b'n', b'\x8d', b'\x9c', b'6', b'\x00', b'\x00', b'\x00', b'\x00'] = 28632171.4375 micro(s)
 LEN(2): [b'\x0e', b'\x00'] = 14
 PAYLOAD(13): [b'\x00', b'\x80', b':', b'\x01', b'\x00', b'\xbb', b'\xaa', b'\xff', b'\xcf', b'\x00', b'\x00', b'\xef', b'\xe3']
-	Src PAN: b'\x00\x01'
-	Src Add: b'\xaa\xbb'
+	Src PAN: 0x0001
+	Src Add: 0xaabb
 RSSI(BYTE 1): -90
 CRC OK (BYTE 2, bit7): 1
 STATUS(2): [RSSI: b'\x00', CORR/LQI: b'\x00']
@@ -44,8 +44,8 @@ PCKT NUM(4): [b'\x04', b'\x00', b'\x00', b'\x00'] = 4
 TIME(8): [b'\xa6', b'@', b'\xdb', b'7', b'\x00', b'\x00', b'\x00', b'\x00'] = 29284869.1875 micro(s)
 LEN(2): [b'\x0b', b'\x00'] = 11
 PAYLOAD(10): [b'\x03', b'\x08', b'\xe3', b'\xff', b'\xff', b'\xff', b'\xff', b'\x07', b'\xee', b'\xe3']
-	Dest PAN: b'\xff\xff'
-	Dest Add: b'\xff\xff'
+	Dest PAN: 0xffff
+	Dest Add: 0xffff
 RSSI(BYTE 1): -91
 CRC OK (BYTE 2, bit7): 1
 STATUS(2): [RSSI: b'\x00', CORR/LQI: b'\x00']
@@ -57,8 +57,8 @@ PCKT NUM(4): [b'\x05', b'\x00', b'\x00', b'\x00'] = 5
 TIME(8): [b'z', b';', b'\xdc', b'7', b'\x00', b'\x00', b'\x00', b'\x00'] = 29286875.8125 micro(s)
 LEN(2): [b'\x0e', b'\x00'] = 14
 PAYLOAD(13): [b'\x00', b'\x80', b';', b'\x01', b'\x00', b'\xbb', b'\xaa', b'\xff', b'\xcf', b'\x00', b'\x00', b'\xef', b'\xe3']
-	Src PAN: b'\x00\x01'
-	Src Add: b'\xaa\xbb'
+	Src PAN: 0x0001
+	Src Add: 0xaabb
 RSSI(BYTE 1): -90
 CRC OK (BYTE 2, bit7): 1
 STATUS(2): [RSSI: b'\x00', CORR/LQI: b'\x00']
@@ -70,8 +70,8 @@ PCKT NUM(4): [b'\x06', b'\x00', b'\x00', b'\x00'] = 6
 TIME(8): [b'\x06', b'\xd2', b'P', b':', b'\x00', b'\x00', b'\x00', b'\x00'] = 30574224.1875 micro(s)
 LEN(2): [b'\x0e', b'\x00'] = 14
 PAYLOAD(13): [b'\x00', b'\x80', b'<', b'\x01', b'\x00', b'\xbb', b'\xaa', b'\xff', b'\xcf', b'\x00', b'\x00', b'\xf0', b'\xe3']
-	Src PAN: b'\x00\x01'
-	Src Add: b'\xaa\xbb'
+	Src PAN: 0x0001
+	Src Add: 0xaabb
 RSSI(BYTE 1): -89
 CRC OK (BYTE 2, bit7): 1
 STATUS(2): [RSSI: b'\x00', CORR/LQI: b'\x00']
@@ -83,10 +83,10 @@ PCKT NUM(4): [b'\x07', b'\x00', b'\x00', b'\x00'] = 7
 TIME(8): [b'\xe6', b'\x81', b'}', b':', b'\x00', b'\x00', b'\x00', b'\x00'] = 30665743.1875 micro(s)
 LEN(2): [b'\x16', b'\x00'] = 22
 PAYLOAD(21): [b'#', b'\xc8', b'\t', b'\x01', b'\x00', b'\xbb', b'\xaa', b'\xff', b'\xff', b'\xcf', b'\\', b'\xa7', b'\x1c', b'\x00', b'K', b'\x12', b'\x00', b'\x01', b'\x80', b'\xe8', b'\xe3']
-	Dest PAN: b'\x00\x01'
-	Dest Add: b'\xaa\xbb'
-	Src PAN: b'\xff\xff'
-	Src Add: b'\x00\x12K\x00\x1c\xa7\\\xcf'
+	Dest PAN: 0x0001
+	Dest Add: 0xaabb
+	Src PAN: 0xffff
+	Src Add: 0x00124b001ca75ccf
 RSSI(BYTE 1): -97
 CRC OK (BYTE 2, bit7): 1
 STATUS(2): [RSSI: b'\x00', CORR/LQI: b'\x00']
@@ -98,10 +98,10 @@ PCKT NUM(4): [b'\x08', b'\x00', b'\x00', b'\x00'] = 8
 TIME(8): [b'\xbe', b'\xe0', b'~', b':', b'\x00', b'\x00', b'\x00', b'\x00'] = 30668549.9375 micro(s)
 LEN(2): [b'\x16', b'\x00'] = 22
 PAYLOAD(21): [b'#', b'\xc8', b'\t', b'\x01', b'\x00', b'\xbb', b'\xaa', b'\xff', b'\xff', b'\xcf', b'\\', b'\xa7', b'\x1c', b'\x00', b'K', b'\x12', b'\x00', b'\x01', b'\x80', b'\xe8', b'\xe3']
-	Dest PAN: b'\x00\x01'
-	Dest Add: b'\xaa\xbb'
-	Src PAN: b'\xff\xff'
-	Src Add: b'\x00\x12K\x00\x1c\xa7\\\xcf'
+	Dest PAN: 0x0001
+	Dest Add: 0xaabb
+	Src PAN: 0xffff
+	Src Add: 0x00124b001ca75ccf
 RSSI(BYTE 1): -97
 CRC OK (BYTE 2, bit7): 1
 STATUS(2): [RSSI: b'\x00', CORR/LQI: b'\x00']
@@ -113,10 +113,10 @@ PCKT NUM(4): [b'\t', b'\x00', b'\x00', b'\x00'] = 9
 TIME(8): [b'>', b'\xb7', b'\x80', b':', b'\x00', b'\x00', b'\x00', b'\x00'] = 30672313.9375 micro(s)
 LEN(2): [b'\x16', b'\x00'] = 22
 PAYLOAD(21): [b'#', b'\xc8', b'\t', b'\x01', b'\x00', b'\xbb', b'\xaa', b'\xff', b'\xff', b'\xcf', b'\\', b'\xa7', b'\x1c', b'\x00', b'K', b'\x12', b'\x00', b'\x01', b'\x80', b'\xe8', b'\xe3']
-	Dest PAN: b'\x00\x01'
-	Dest Add: b'\xaa\xbb'
-	Src PAN: b'\xff\xff'
-	Src Add: b'\x00\x12K\x00\x1c\xa7\\\xcf'
+	Dest PAN: 0x0001
+	Dest Add: 0xaabb
+	Src PAN: 0xffff
+	Src Add: 0x00124b001ca75ccf
 RSSI(BYTE 1): -97
 CRC OK (BYTE 2, bit7): 1
 STATUS(2): [RSSI: b'\x00', CORR/LQI: b'\x00']
@@ -128,10 +128,10 @@ PCKT NUM(4): [b'\n', b'\x00', b'\x00', b'\x00'] = 10
 TIME(8): [b'\xae', b'\xdd', b'\x82', b':', b'\x00', b'\x00', b'\x00', b'\x00'] = 30676717.4375 micro(s)
 LEN(2): [b'\x16', b'\x00'] = 22
 PAYLOAD(21): [b'#', b'\xc8', b'\t', b'\x01', b'\x00', b'\xbb', b'\xaa', b'\xff', b'\xff', b'\xcf', b'\\', b'\xa7', b'\x1c', b'\x00', b'K', b'\x12', b'\x00', b'\x01', b'\x80', b'\xe8', b'\xe3']
-	Dest PAN: b'\x00\x01'
-	Dest Add: b'\xaa\xbb'
-	Src PAN: b'\xff\xff'
-	Src Add: b'\x00\x12K\x00\x1c\xa7\\\xcf'
+	Dest PAN: 0x0001
+	Dest Add: 0xaabb
+	Src PAN: 0xffff
+	Src Add: 0x00124b001ca75ccf
 RSSI(BYTE 1): -97
 CRC OK (BYTE 2, bit7): 1
 STATUS(2): [RSSI: b'\x00', CORR/LQI: b'\x00']
