@@ -1,5 +1,6 @@
 import numpy as np
 from fcf_type_codes import TYPES as fcft
+import pandas as pd
 
 filename = 'tests/TestControl_150422.psd'
 file = open(filename,'rb')
@@ -29,6 +30,14 @@ pckt_status = []
 pckt_spare = []
 N = 1
 
+# dataframe info
+columns = ['FCS', 'CORR', 'BUFF_OVERFLOW', 'GENERIC',
+           'PCKT_NUM', 'TIME(MS)', 'LENGTH', 'PAYLOAD', 'RSSI', 'CRC_OK',
+           'FRAME_TYPE', 'DEST_PAN', 'DEST_ADD', 'SRC_PAN', 'SRC_ADD']
+df = pd.DataFrame(columns=columns)
+row = {col: '' for col in columns}
+first = True
+
 # 11 9 9 11 10
 # 11(+54) = 65, 9(+51) = 60, 10+(53) = 63 (LQI)
 # 11(-73) = -62, 9(-73) = -64, 10(-73) = -63 (RSSI)
@@ -37,6 +46,7 @@ while mybyte:
     if c == 10: break
     # first byte: PACKET INFO
     if p == 1:
+
         s += "================\n"
         s += "PCKT INFO\n"
         binary_string = "{:08b}".format(int(mybyte.hex(), 16))
@@ -44,20 +54,28 @@ while mybyte:
         used_bits = inv[:4]
         if used_bits[0] == '1':
             s += 'FCS: true '
+            row['FCS'] = 1
         else:
             s += 'FCS: false '
+            row['FCS'] = 0
         if used_bits[1] == '1':
             s += 'CORR: 1 '
+            row['CORR'] = 1
         else:
             s += 'CORR: 0 '
+            row['CORR'] = 0
         if used_bits[2] == '1':
             s += 'BUFF_OVERFLOW: true '
+            row['BUFF_OVERFLOW'] = 1
         else:
             s += 'BUFF_OVERFLOW: false '
+            row['BUFF_OVERFLOW'] = 0
         if used_bits[3] == '1':
             s += 'GENERIC: true '
+            row['GENERIC'] = 1
         else:
             s += 'GENERIC: false '
+            row['GENERIC'] = 0
         s += '\n'
         p+=1
         starting = False
@@ -71,6 +89,7 @@ while mybyte:
             b = b''.join(pckt_num)
             value = int.from_bytes(b, byteorder='little')
             s += f"PCKT NUM({NUM}): {pckt_num} = {value}\n"
+            row['PCKT_NUM'] = value
             pckt_ts = []
         mybyte = file.read(1)
         p += 1
@@ -82,6 +101,7 @@ while mybyte:
             b = b''.join(pckt_ts)
             value = (int.from_bytes(b, byteorder='little')) / CLOCK
             s += f"TIME({TS}): {pckt_ts} = {value} micro(s)\n"
+            row['TIME(MS)'] = value
             pckt_len = []
         mybyte = file.read(1)
         p += 1
@@ -93,6 +113,7 @@ while mybyte:
             # length value includes the status bytes (2) if bit0 = 1 from packt info
             value = int.from_bytes(b, byteorder='little')
             s += f"LEN({LEN}): {pckt_len} = {value}\n"
+            row['LENGTH'] = value
             pckt_payload = []
         mybyte = file.read(1)
         p += 1
@@ -118,28 +139,54 @@ while mybyte:
                     dest_pan = b''.join([pckt_payload[4], pckt_payload[3]])
                     dest_add = b''.join([pckt_payload[6], pckt_payload[5]])
                     s += f"\tDest PAN: {'0x' + dest_pan.hex()}\n\tDest Add: {'0x' + dest_add.hex()}\n"
+                    row['FRAME_TYPE'] = 'CMD'
+                    row['DEST_PAN'] = '0x' + dest_pan.hex()
+                    row['DEST_ADD'] = '0x' + dest_add.hex()
+                    row['SRC_PAN'] = ''
+                    row['SRC_ADD'] = ''
                 elif len(pckt_payload) == 21:
                     dest_pan = b''.join([pckt_payload[4], pckt_payload[3]])
                     dest_add = b''.join([pckt_payload[6], pckt_payload[5]])
                     src_pan = b''.join([pckt_payload[8], pckt_payload[7]])
                     src_add = b''.join(pckt_payload[9:(9 + LONG_LENGTH)][::-1])
                     s += f"\tDest PAN: {'0x' + dest_pan.hex()}\n\tDest Add: {'0x' + dest_add.hex()}\n\tSrc PAN: {'0x' + src_pan.hex()}\n\tSrc Add: {'0x' + src_add.hex()}\n"
+                    row['FRAME_TYPE'] = 'CMD'
+                    row['DEST_PAN'] = '0x' + dest_pan.hex()
+                    row['DEST_ADD'] = '0x' + dest_add.hex()
+                    row['SRC_PAN'] = '0x' + src_pan.hex()
+                    row['SRC_ADD'] = '0x' + src_add.hex()
                 elif len(pckt_payload) == 18:
                     dest_pan = b''.join([pckt_payload[4], pckt_payload[3]])
                     dest_add = b''.join([pckt_payload[6], pckt_payload[5]])
                     src_add = b''.join(pckt_payload[7:(7 + LONG_LENGTH)][::-1])
                     s += f"\tDest PAN: {'0x' + dest_pan.hex()}\n\tDest Add: {'0x' + dest_add.hex()}\n\tSrc Add: {'0x' + src_add.hex()}\n"
+                    row['FRAME_TYPE'] = 'CMD'
+                    row['DEST_PAN'] = '0x' + dest_pan.hex()
+                    row['DEST_ADD'] = '0x' + dest_add.hex()
+                    row['SRC_PAN'] = ''
+                    row['SRC_ADD'] = '0x' + src_add.hex()
                 elif len(pckt_payload) == 27:
                     dest_pan = b''.join([pckt_payload[4], pckt_payload[3]])
                     dest_add = b''.join(pckt_payload[5:(5 + LONG_LENGTH)][::-1])
                     src_add = b''.join(pckt_payload[((5 + LONG_LENGTH) + 1):((5 + LONG_LENGTH) + 1 + LONG_LENGTH)][::-1])
                     s += f"\tDest PAN: {'0x' + dest_pan.hex()}\n\tDest Add: {'0x' + dest_add.hex()}\n\tSrc Add: {'0x' + src_add.hex()}\n"
+                    row['FRAME_TYPE'] = 'CMD'
+                    row['DEST_PAN'] = '0x' + dest_pan.hex()
+                    row['DEST_ADD'] = '0x' + dest_add.hex()
+                    row['SRC_PAN'] = ''
+                    row['SRC_ADD'] = '0x' + src_add.hex()
                 elif len(pckt_payload) == 12:
                     dest_pan = b''.join([pckt_payload[4], pckt_payload[3]])
                     dest_add = b''.join([pckt_payload[6], pckt_payload[5]])
                     src_add = b''.join([pckt_payload[8], pckt_payload[7]])
                     s += f"\tDest PAN: {'0x' + dest_pan.hex()}\n\tDest Add: {'0x' + dest_add.hex()}\n\tSrc Add: {'0x' + src_add.hex()}\n"
+                    row['FRAME_TYPE'] = 'CMD'
+                    row['DEST_PAN'] = '0x' + dest_pan.hex()
+                    row['DEST_ADD'] = '0x' + dest_add.hex()
+                    row['SRC_PAN'] = ''
+                    row['SRC_ADD'] = '0x' + src_add.hex()
                 else:
+                    row['FRAME_TYPE'] = 'CMD'
                     s += f"CMD packet with unexpected length\n"
             # type BCN: 5 lengths: 13, 21, 23, 15, 17 (same fields)
             if fcf_type == fcft['BCN']:
@@ -147,14 +194,22 @@ while mybyte:
                     src_pan = b''.join([pckt_payload[4], pckt_payload[3]])
                     src_add = b''.join([pckt_payload[6], pckt_payload[5]])
                     s += f"\tSrc PAN: {'0x' + src_pan.hex()}\n\tSrc Add: {'0x' + src_add.hex()}\n"
+                    row['FRAME_TYPE'] = 'BCN'
+                    row['DEST_PAN'] = ''
+                    row['DEST_ADD'] = ''
+                    row['SRC_PAN'] = '0x' + src_pan.hex()
+                    row['SRC_ADD'] = '0x' + src_add.hex()
                 else:
+                    row['FRAME_TYPE'] = 'BCN'
                     s += f"BCN packet with unexpected length\n"
             # type ACK: 1 length: 5
             if fcf_type == fcft['ACK']:
                 if len(pckt_payload) == 5:
                     # no fields with addresses
+                    row['FRAME_TYPE'] = 'ACK'
                     pass
                 else:
+                    row['FRAME_TYPE'] = 'ACK'
                     s += f"ACK packet with unexpected length\n"
             # type DATA: always different length
             if fcf_type == fcft['DATA']:
@@ -162,6 +217,11 @@ while mybyte:
                 dest_add = b''.join([pckt_payload[6], pckt_payload[5]])
                 src_add = b''.join([pckt_payload[8], pckt_payload[7]])
                 s += f"\tDest PAN: {'0x' + dest_pan.hex()}\n\tDest Add: {'0x' + dest_add.hex()}\n\tSrc Add: {'0x' + src_add.hex()}\n"
+                row['FRAME_TYPE'] = 'DATA'
+                row['DEST_PAN'] = '0x' + dest_pan.hex()
+                row['DEST_ADD'] = '0x' + dest_add.hex()
+                row['SRC_PAN'] = ''
+                row['SRC_ADD'] = '0x' + src_add.hex()
 
             # failed tests for rssi (?)
             ba = bytearray(pckt_payload[-2])
@@ -172,6 +232,7 @@ while mybyte:
             # rssi included in length: rssi included in payload (BYTE 1) MUST SUBSTRACT 73
             rssi = int.from_bytes(pckt_payload[-2], byteorder='little', signed=True)
             s += f"RSSI(BYTE 1): {(rssi - 73)}\n"
+            row['RSSI'] = (rssi - 73)
 
             # crc ok included in length: (BYTE 2, bit7)
             binary_string = "{:08b}".format(int(pckt_payload[-1].hex(), 16))
@@ -182,6 +243,7 @@ while mybyte:
             if bit7 == '0':
                 ok = "0"
             s += f"CRC OK (BYTE 2, bit7): {ok}\n"
+            row['CRC_OK'] = int(ok)
             pckt_status = []
         mybyte = file.read(1)
         p += 1
@@ -213,10 +275,15 @@ while mybyte:
         mybyte = file.read(1)
         p += 1
     #s += f"hex: {h} = {value}\n"
+    if p == (SPARE + (((1 + NUM) + TS) + LEN)):
+        row_df = pd.DataFrame([row])
+        df = pd.concat([df, row_df], ignore_index=True, axis=0)
+        row = {col: '' for col in columns}
 
 f = open("out.txt", "a")
 f.write(s)
 f.close()
+df.to_csv('csvs/' + (filename.split('/')[1]).split('.')[0] + '.csv')
 
 
 
