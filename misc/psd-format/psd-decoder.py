@@ -141,9 +141,9 @@ while mybyte:
                     s += f"\tDest PAN: {'0x' + dest_pan.hex()}\n\tDest Add: {'0x' + dest_add.hex()}\n\tSrc Add: {'0x' + src_add.hex()}\n"
                 else:
                     s += f"CMD packet with unexpected length\n"
-            # type BCN: 3 lengths: 13, 21, 23 (same fields)
+            # type BCN: 5 lengths: 13, 21, 23, 15, 17 (same fields)
             if fcf_type == fcft['BCN']:
-                if len(pckt_payload) == 13 or len(pckt_payload) == 21 or len(pckt_payload) == 23:
+                if len(pckt_payload) == 13 or len(pckt_payload) == 21 or len(pckt_payload) == 23 or len(pckt_payload) == 15 or len(pckt_payload) == 17:
                     src_pan = b''.join([pckt_payload[4], pckt_payload[3]])
                     src_add = b''.join([pckt_payload[6], pckt_payload[5]])
                     s += f"\tSrc PAN: {'0x' + src_pan.hex()}\n\tSrc Add: {'0x' + src_add.hex()}\n"
@@ -156,6 +156,12 @@ while mybyte:
                     pass
                 else:
                     s += f"ACK packet with unexpected length\n"
+            # type DATA: always different length
+            if fcf_type == fcft['DATA']:
+                dest_pan = b''.join([pckt_payload[4], pckt_payload[3]])
+                dest_add = b''.join([pckt_payload[6], pckt_payload[5]])
+                src_add = b''.join([pckt_payload[8], pckt_payload[7]])
+                s += f"\tDest PAN: {'0x' + dest_pan.hex()}\n\tDest Add: {'0x' + dest_add.hex()}\n\tSrc Add: {'0x' + src_add.hex()}\n"
 
             # failed tests for rssi (?)
             ba = bytearray(pckt_payload[-2])
