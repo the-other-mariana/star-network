@@ -185,6 +185,16 @@ while mybyte:
                     row['DEST_ADD'] = '0x' + dest_add.hex()
                     row['SRC_PAN'] = ''
                     row['SRC_ADD'] = '0x' + src_add.hex()
+                elif len(pckt_payload) == 107:
+                    dest_pan = b''.join([pckt_payload[4], pckt_payload[3]])
+                    dest_add = b''.join([pckt_payload[6], pckt_payload[5]])
+                    src_add = b''.join([pckt_payload[8], pckt_payload[7]])
+                    s += f"\tDest PAN: {'0x' + dest_pan.hex()}\n\tDest Add: {'0x' + dest_add.hex()}\n\tSrc Add: {'0x' + src_add.hex()}\n"
+                    row['FRAME_TYPE'] = 'CMD'
+                    row['DEST_PAN'] = '0x' + dest_pan.hex()
+                    row['DEST_ADD'] = '0x' + dest_add.hex()
+                    row['SRC_PAN'] = ''
+                    row['SRC_ADD'] = '0x' + src_add.hex()
                 else:
                     row['FRAME_TYPE'] = 'CMD'
                     s += f"CMD packet with unexpected length\n"
@@ -218,6 +228,18 @@ while mybyte:
                 src_add = b''.join([pckt_payload[8], pckt_payload[7]])
                 s += f"\tDest PAN: {'0x' + dest_pan.hex()}\n\tDest Add: {'0x' + dest_add.hex()}\n\tSrc Add: {'0x' + src_add.hex()}\n"
                 row['FRAME_TYPE'] = 'DATA'
+                row['DEST_PAN'] = '0x' + dest_pan.hex()
+                row['DEST_ADD'] = '0x' + dest_add.hex()
+                row['SRC_PAN'] = ''
+                row['SRC_ADD'] = '0x' + src_add.hex()
+
+            # type R111, R100
+            if fcf_type not in [fcft['DATA'], fcft['CMD'], fcft['BCN'], fcft['ACK']]: # 108
+                dest_pan = b''.join([pckt_payload[4], pckt_payload[3]])
+                dest_add = b''.join([pckt_payload[6], pckt_payload[5]])
+                src_add = b''.join([pckt_payload[8], pckt_payload[7]])
+                s += f"\tDest PAN: {'0x' + dest_pan.hex()}\n\tDest Add: {'0x' + dest_add.hex()}\n\tSrc Add: {'0x' + src_add.hex()}\n"
+                row['FRAME_TYPE'] = fcf_type
                 row['DEST_PAN'] = '0x' + dest_pan.hex()
                 row['DEST_ADD'] = '0x' + dest_add.hex()
                 row['SRC_PAN'] = ''
