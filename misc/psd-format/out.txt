@@ -2,24 +2,26 @@
 PCKT INFO
 FCS: true CORR: 1 BUFF_OVERFLOW: false GENERIC: false 
 PCKT NUM(4): [b'\x01', b'\x00', b'\x00', b'\x00'] = 1
-TIME(8): [b'\xe2', b'\xbd', b'\xa8', b'\x16', b'\x00', b'\x00', b'\x00', b'\x00'] = 11879919.0625 micro(s)
-LEN(2): [b'\x0b', b'\x00'] = 11
-PAYLOAD(10): [b'\x03', b'\x08', b'\xb2', b'\xff', b'\xff', b'\xff', b'\xff', b'\x07', b'\xe7', b'\xe3']
+TIME(8): [b'Z', b'}', b'\\', b'\n', b'\x00', b'\x00', b'\x00', b'\x00'] = 5432298.8125 micro(s)
+LEN(2): [b'\x13', b'\x00'] = 19
+PAYLOAD(18): [b'C', b'\xc8', b'\xeb', b'\xff', b'\xff', b'\xff', b'\xff', b'\x04', b'A', b'\xf6', b'\x14', b'\x00', b'K', b'\x12', b'\x00', b'\x06', b'\xe5', b'\xd7']
+Add Mode: 11000010 00010011
 	Dest PAN: 0xffff
 	Dest Add: 0xffff
-RSSI(BYTE 1): -98
+	Src Add: 0x00124b0014f64104
+RSSI(BYTE 1): -100
 CRC OK (BYTE 2, bit7): 1
 STATUS(2): [RSSI: b'\x00', CORR/LQI: b'\x00']
-SPARE(123): [b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00']
+SPARE(115): [b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00']
 ================
 PCKT INFO
 FCS: true CORR: 1 BUFF_OVERFLOW: false GENERIC: false 
 PCKT NUM(4): [b'\x02', b'\x00', b'\x00', b'\x00'] = 2
-TIME(8): [b'\xae', b'\x07', b'\x9c', b'6', b'\x00', b'\x00', b'\x00', b'\x00'] = 28631101.4375 micro(s)
+TIME(8): [b'.', b'a', b'\x18', b'\x17', b'\x00', b'\x00', b'\x00', b'\x00'] = 12108553.4375 micro(s)
 LEN(2): [b'\x0b', b'\x00'] = 11
-PAYLOAD(10): [b'\x03', b'\x08', b'\x05', b'\xff', b'\xff', b'\xff', b'\xff', b'\x07', b'\xe6', b'\xe3']
+PAYLOAD(10): [b'\x03', b'\x08', b'H', b'\xff', b'\xff', b'\xff', b'\xff', b'\x07', b'\xe6', b'\xd7']
+Add Mode: 11000000 00010000
 	Dest PAN: 0xffff
-	Dest Add: 0xffff
 RSSI(BYTE 1): -99
 CRC OK (BYTE 2, bit7): 1
 STATUS(2): [RSSI: b'\x00', CORR/LQI: b'\x00']
@@ -28,25 +30,27 @@ SPARE(123): [b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x
 PCKT INFO
 FCS: true CORR: 1 BUFF_OVERFLOW: false GENERIC: false 
 PCKT NUM(4): [b'\x03', b'\x00', b'\x00', b'\x00'] = 3
-TIME(8): [b'n', b'\x8d', b'\x9c', b'6', b'\x00', b'\x00', b'\x00', b'\x00'] = 28632171.4375 micro(s)
-LEN(2): [b'\x0e', b'\x00'] = 14
-PAYLOAD(13): [b'\x00', b'\x80', b':', b'\x01', b'\x00', b'\xbb', b'\xaa', b'\xff', b'\xcf', b'\x00', b'\x00', b'\xef', b'\xe3']
-	Src PAN: 0x0001
-	Src Add: 0xaabb
+TIME(8): [b'\xf2', b'r', b'\xe7', b',', b'\x00', b'\x00', b'\x00', b'\x00'] = 23542679.5625 micro(s)
+LEN(2): [b'\x13', b'\x00'] = 19
+PAYLOAD(18): [b'C', b'\xc8', b'F', b'\xff', b'\xff', b'\xff', b'\xff', b'D', b'B', b'\xf6', b'\x14', b'\x00', b'K', b'\x12', b'\x00', b'\x06', b'\xef', b'\xd7']
+Add Mode: 11000010 00010011
+	Dest PAN: 0xffff
+	Dest Add: 0xffff
+	Src Add: 0x00124b0014f64244
 RSSI(BYTE 1): -90
 CRC OK (BYTE 2, bit7): 1
 STATUS(2): [RSSI: b'\x00', CORR/LQI: b'\x00']
-SPARE(120): [b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00']
+SPARE(115): [b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00']
 ================
 PCKT INFO
 FCS: true CORR: 1 BUFF_OVERFLOW: false GENERIC: false 
 PCKT NUM(4): [b'\x04', b'\x00', b'\x00', b'\x00'] = 4
-TIME(8): [b'\xa6', b'@', b'\xdb', b'7', b'\x00', b'\x00', b'\x00', b'\x00'] = 29284869.1875 micro(s)
+TIME(8): [b'^', b'\xb3', b'F', b'-', b'\x00', b'\x00', b'\x00', b'\x00'] = 23737754.9375 micro(s)
 LEN(2): [b'\x0b', b'\x00'] = 11
-PAYLOAD(10): [b'\x03', b'\x08', b'\xe3', b'\xff', b'\xff', b'\xff', b'\xff', b'\x07', b'\xee', b'\xe3']
+PAYLOAD(10): [b'\x03', b'\x08', b'\xc9', b'\xff', b'\xff', b'\xff', b'\xff', b'\x07', b'\xf4', b'\xd7']
+Add Mode: 11000000 00010000
 	Dest PAN: 0xffff
-	Dest Add: 0xffff
-RSSI(BYTE 1): -91
+RSSI(BYTE 1): -85
 CRC OK (BYTE 2, bit7): 1
 STATUS(2): [RSSI: b'\x00', CORR/LQI: b'\x00']
 SPARE(123): [b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00']
@@ -54,12 +58,13 @@ SPARE(123): [b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x
 PCKT INFO
 FCS: true CORR: 1 BUFF_OVERFLOW: false GENERIC: false 
 PCKT NUM(4): [b'\x05', b'\x00', b'\x00', b'\x00'] = 5
-TIME(8): [b'z', b';', b'\xdc', b'7', b'\x00', b'\x00', b'\x00', b'\x00'] = 29286875.8125 micro(s)
+TIME(8): [b'\xa2', b"'", b'H', b'-', b'\x00', b'\x00', b'\x00', b'\x00'] = 23740733.0625 micro(s)
 LEN(2): [b'\x0e', b'\x00'] = 14
-PAYLOAD(13): [b'\x00', b'\x80', b';', b'\x01', b'\x00', b'\xbb', b'\xaa', b'\xff', b'\xcf', b'\x00', b'\x00', b'\xef', b'\xe3']
+PAYLOAD(13): [b'\x00', b'\x80', b'?', b'\x01', b'\x00', b'\xbb', b'\xaa', b'\xff', b'O', b'\x00', b'\x00', b'\xed', b'\xd7']
+Add Mode: 00000000 00000001
 	Src PAN: 0x0001
 	Src Add: 0xaabb
-RSSI(BYTE 1): -90
+RSSI(BYTE 1): -92
 CRC OK (BYTE 2, bit7): 1
 STATUS(2): [RSSI: b'\x00', CORR/LQI: b'\x00']
 SPARE(120): [b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00']
@@ -67,72 +72,608 @@ SPARE(120): [b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x
 PCKT INFO
 FCS: true CORR: 1 BUFF_OVERFLOW: false GENERIC: false 
 PCKT NUM(4): [b'\x06', b'\x00', b'\x00', b'\x00'] = 6
-TIME(8): [b'\x06', b'\xd2', b'P', b':', b'\x00', b'\x00', b'\x00', b'\x00'] = 30574224.1875 micro(s)
+TIME(8): [b'Z', b'n', b'u', b'0', b'\x00', b'\x00', b'\x00', b'\x00'] = 25406322.8125 micro(s)
+LEN(2): [b'\x0b', b'\x00'] = 11
+PAYLOAD(10): [b'\x03', b'\x08', b'r', b'\xff', b'\xff', b'\xff', b'\xff', b'\x07', b'\xf4', b'\xd7']
+Add Mode: 11000000 00010000
+	Dest PAN: 0xffff
+RSSI(BYTE 1): -85
+CRC OK (BYTE 2, bit7): 1
+STATUS(2): [RSSI: b'\x00', CORR/LQI: b'\x00']
+SPARE(123): [b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00']
+================
+PCKT INFO
+FCS: true CORR: 1 BUFF_OVERFLOW: false GENERIC: false 
+PCKT NUM(4): [b'\x07', b'\x00', b'\x00', b'\x00'] = 7
+TIME(8): [b'v', b'A', b'v', b'0', b'\x00', b'\x00', b'\x00', b'\x00'] = 25408011.6875 micro(s)
 LEN(2): [b'\x0e', b'\x00'] = 14
-PAYLOAD(13): [b'\x00', b'\x80', b'<', b'\x01', b'\x00', b'\xbb', b'\xaa', b'\xff', b'\xcf', b'\x00', b'\x00', b'\xf0', b'\xe3']
+PAYLOAD(13): [b'\x00', b'\x80', b'@', b'\x01', b'\x00', b'\xbb', b'\xaa', b'\xff', b'O', b'\x00', b'\x00', b'\xee', b'\xd7']
+Add Mode: 00000000 00000001
 	Src PAN: 0x0001
 	Src Add: 0xaabb
-RSSI(BYTE 1): -89
+RSSI(BYTE 1): -91
 CRC OK (BYTE 2, bit7): 1
 STATUS(2): [RSSI: b'\x00', CORR/LQI: b'\x00']
 SPARE(120): [b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00']
 ================
 PCKT INFO
 FCS: true CORR: 1 BUFF_OVERFLOW: false GENERIC: false 
-PCKT NUM(4): [b'\x07', b'\x00', b'\x00', b'\x00'] = 7
-TIME(8): [b'\xe6', b'\x81', b'}', b':', b'\x00', b'\x00', b'\x00', b'\x00'] = 30665743.1875 micro(s)
-LEN(2): [b'\x16', b'\x00'] = 22
-PAYLOAD(21): [b'#', b'\xc8', b'\t', b'\x01', b'\x00', b'\xbb', b'\xaa', b'\xff', b'\xff', b'\xcf', b'\\', b'\xa7', b'\x1c', b'\x00', b'K', b'\x12', b'\x00', b'\x01', b'\x80', b'\xe8', b'\xe3']
-	Dest PAN: 0x0001
-	Dest Add: 0xaabb
-	Src PAN: 0xffff
-	Src Add: 0x00124b001ca75ccf
-RSSI(BYTE 1): -97
-CRC OK (BYTE 2, bit7): 1
-STATUS(2): [RSSI: b'\x00', CORR/LQI: b'\x00']
-SPARE(112): [b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00']
-================
-PCKT INFO
-FCS: true CORR: 1 BUFF_OVERFLOW: false GENERIC: false 
 PCKT NUM(4): [b'\x08', b'\x00', b'\x00', b'\x00'] = 8
-TIME(8): [b'\xbe', b'\xe0', b'~', b':', b'\x00', b'\x00', b'\x00', b'\x00'] = 30668549.9375 micro(s)
-LEN(2): [b'\x16', b'\x00'] = 22
-PAYLOAD(21): [b'#', b'\xc8', b'\t', b'\x01', b'\x00', b'\xbb', b'\xaa', b'\xff', b'\xff', b'\xcf', b'\\', b'\xa7', b'\x1c', b'\x00', b'K', b'\x12', b'\x00', b'\x01', b'\x80', b'\xe8', b'\xe3']
-	Dest PAN: 0x0001
-	Dest Add: 0xaabb
-	Src PAN: 0xffff
-	Src Add: 0x00124b001ca75ccf
-RSSI(BYTE 1): -97
+TIME(8): [b'\xb6', b'\x01', b'\x0b', b'9', b'\x00', b'\x00', b'\x00', b'\x00'] = 29906957.6875 micro(s)
+LEN(2): [b'\x0b', b'\x00'] = 11
+PAYLOAD(10): [b'\x03', b'\x08', b'v', b'\xff', b'\xff', b'\xff', b'\xff', b'\x07', b'\xf3', b'\xd7']
+Add Mode: 11000000 00010000
+	Dest PAN: 0xffff
+RSSI(BYTE 1): -86
 CRC OK (BYTE 2, bit7): 1
 STATUS(2): [RSSI: b'\x00', CORR/LQI: b'\x00']
-SPARE(112): [b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00']
+SPARE(123): [b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00']
 ================
 PCKT INFO
 FCS: true CORR: 1 BUFF_OVERFLOW: false GENERIC: false 
 PCKT NUM(4): [b'\t', b'\x00', b'\x00', b'\x00'] = 9
-TIME(8): [b'>', b'\xb7', b'\x80', b':', b'\x00', b'\x00', b'\x00', b'\x00'] = 30672313.9375 micro(s)
+TIME(8): [b'\xaa', b'\xfc', b'\x0b', b'9', b'\x00', b'\x00', b'\x00', b'\x00'] = 29908965.3125 micro(s)
+LEN(2): [b'\x0e', b'\x00'] = 14
+PAYLOAD(13): [b'\x00', b'\x80', b'A', b'\x01', b'\x00', b'\xbb', b'\xaa', b'\xff', b'O', b'\x00', b'\x00', b'\xec', b'\xd7']
+Add Mode: 00000000 00000001
+	Src PAN: 0x0001
+	Src Add: 0xaabb
+RSSI(BYTE 1): -93
+CRC OK (BYTE 2, bit7): 1
+STATUS(2): [RSSI: b'\x00', CORR/LQI: b'\x00']
+SPARE(120): [b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00']
+================
+PCKT INFO
+FCS: true CORR: 1 BUFF_OVERFLOW: false GENERIC: false 
+PCKT NUM(4): [b'\n', b'\x00', b'\x00', b'\x00'] = 10
+TIME(8): [b'\n', b"'", b'&', b'?', b'\x00', b'\x00', b'\x00', b'\x00'] = 33108280.3125 micro(s)
+LEN(2): [b'\x0b', b'\x00'] = 11
+PAYLOAD(10): [b'\x03', b'\x08', b'\xcd', b'\xff', b'\xff', b'\xff', b'\xff', b'\x07', b'\xf8', b'\xd7']
+Add Mode: 11000000 00010000
+	Dest PAN: 0xffff
+RSSI(BYTE 1): -81
+CRC OK (BYTE 2, bit7): 1
+STATUS(2): [RSSI: b'\x00', CORR/LQI: b'\x00']
+SPARE(123): [b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00']
+================
+PCKT INFO
+FCS: true CORR: 1 BUFF_OVERFLOW: false GENERIC: false 
+PCKT NUM(4): [b'\x0b', b'\x00', b'\x00', b'\x00'] = 11
+TIME(8): [b'\xe2', b'\x99', b"'", b'?', b'\x00', b'\x00', b'\x00', b'\x00'] = 33111247.0625 micro(s)
+LEN(2): [b'\x0e', b'\x00'] = 14
+PAYLOAD(13): [b'\x00', b'\x80', b'B', b'\x01', b'\x00', b'\xbb', b'\xaa', b'\xff', b'O', b'\x00', b'\x00', b'\xed', b'\xd7']
+Add Mode: 00000000 00000001
+	Src PAN: 0x0001
+	Src Add: 0xaabb
+RSSI(BYTE 1): -92
+CRC OK (BYTE 2, bit7): 1
+STATUS(2): [RSSI: b'\x00', CORR/LQI: b'\x00']
+SPARE(120): [b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00']
+================
+PCKT INFO
+FCS: true CORR: 1 BUFF_OVERFLOW: false GENERIC: false 
+PCKT NUM(4): [b'\x0c', b'\x00', b'\x00', b'\x00'] = 12
+TIME(8): [b'V', b'\xa7', b'\xfc', b'P', b'\x00', b'\x00', b'\x00', b'\x00'] = 42460474.6875 micro(s)
+LEN(2): [b'\x13', b'\x00'] = 19
+PAYLOAD(18): [b'C', b'\xc8', b'\xa7', b'\xff', b'\xff', b'\xff', b'\xff', b'\x9e', b's', b'\xa1', b'\x1c', b'\x00', b'K', b'\x12', b'\x00', b'\x06', b'\xf2', b'\xd7']
+Add Mode: 11000010 00010011
+	Dest PAN: 0xffff
+	Dest Add: 0xffff
+	Src Add: 0x00124b001ca1739e
+RSSI(BYTE 1): -87
+CRC OK (BYTE 2, bit7): 1
+STATUS(2): [RSSI: b'\x00', CORR/LQI: b'\x00']
+SPARE(115): [b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00']
+================
+PCKT INFO
+FCS: true CORR: 1 BUFF_OVERFLOW: false GENERIC: false 
+PCKT NUM(4): [b'\r', b'\x00', b'\x00', b'\x00'] = 13
+TIME(8): [b'\xe2', b'l', b'\x98', b'\\', b'\x00', b'\x00', b'\x00', b'\x00'] = 48546663.0625 micro(s)
+LEN(2): [b'\x0b', b'\x00'] = 11
+PAYLOAD(10): [b'\x03', b'\x08', b'z', b'\xff', b'\xff', b'\xff', b'\xff', b'\x07', b'\xe7', b'\xd7']
+Add Mode: 11000000 00010000
+	Dest PAN: 0xffff
+RSSI(BYTE 1): -98
+CRC OK (BYTE 2, bit7): 1
+STATUS(2): [RSSI: b'\x00', CORR/LQI: b'\x00']
+SPARE(123): [b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00']
+================
+PCKT INFO
+FCS: true CORR: 1 BUFF_OVERFLOW: false GENERIC: false 
+PCKT NUM(4): [b'\x0e', b'\x00', b'\x00', b'\x00'] = 14
+TIME(8): [b'.', b'\x18', b'\x99', b'\\', b'\x00', b'\x00', b'\x00', b'\x00'] = 48548033.4375 micro(s)
+LEN(2): [b'\x0e', b'\x00'] = 14
+PAYLOAD(13): [b'\x00', b'\x80', b'C', b'\x01', b'\x00', b'\xbb', b'\xaa', b'\xff', b'\xcf', b'\x00', b'\x00', b'\xec', b'\xd7']
+Add Mode: 00000000 00000001
+	Src PAN: 0x0001
+	Src Add: 0xaabb
+RSSI(BYTE 1): -93
+CRC OK (BYTE 2, bit7): 1
+STATUS(2): [RSSI: b'\x00', CORR/LQI: b'\x00']
+SPARE(120): [b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00']
+================
+PCKT INFO
+FCS: true CORR: 1 BUFF_OVERFLOW: false GENERIC: false 
+PCKT NUM(4): [b'\x0f', b'\x00', b'\x00', b'\x00'] = 15
+TIME(8): [b'"', b'0', b'\xf3', b'\\', b'\x00', b'\x00', b'\x00', b'\x00'] = 48732545.0625 micro(s)
+LEN(2): [b'\x0b', b'\x00'] = 11
+PAYLOAD(10): [b'\x03', b'\x08', b'\xd1', b'\xff', b'\xff', b'\xff', b'\xff', b'\x07', b'\xf7', b'\xd7']
+Add Mode: 11000000 00010000
+	Dest PAN: 0xffff
+RSSI(BYTE 1): -82
+CRC OK (BYTE 2, bit7): 1
+STATUS(2): [RSSI: b'\x00', CORR/LQI: b'\x00']
+SPARE(123): [b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00']
+================
+PCKT INFO
+FCS: true CORR: 1 BUFF_OVERFLOW: false GENERIC: false 
+PCKT NUM(4): [b'\x10', b'\x00', b'\x00', b'\x00'] = 16
+TIME(8): [b'\xb2', b'\xb5', b'\xf3', b'\\', b'\x00', b'\x00', b'\x00', b'\x00'] = 48733613.5625 micro(s)
+LEN(2): [b'\x0e', b'\x00'] = 14
+PAYLOAD(13): [b'\x00', b'\x80', b'D', b'\x01', b'\x00', b'\xbb', b'\xaa', b'\xff', b'\xcf', b'\x00', b'\x00', b'\xec', b'\xd7']
+Add Mode: 00000000 00000001
+	Src PAN: 0x0001
+	Src Add: 0xaabb
+RSSI(BYTE 1): -93
+CRC OK (BYTE 2, bit7): 1
+STATUS(2): [RSSI: b'\x00', CORR/LQI: b'\x00']
+SPARE(120): [b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00']
+================
+PCKT INFO
+FCS: true CORR: 1 BUFF_OVERFLOW: false GENERIC: false 
+PCKT NUM(4): [b'\x11', b'\x00', b'\x00', b'\x00'] = 17
+TIME(8): [b'j', b'b', b'{', b'`', b'\x00', b'\x00', b'\x00', b'\x00'] = 50584339.3125 micro(s)
+LEN(2): [b'\x06', b'\x00'] = 6
+PAYLOAD(5): [b'\x02', b'\x00', b'~', b'\xec', b'\xd7']
+Add Mode: 01000000 00000000
+RSSI(BYTE 1): -93
+CRC OK (BYTE 2, bit7): 1
+STATUS(2): [RSSI: b'\x00', CORR/LQI: b'\x00']
+SPARE(128): [b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00']
+================
+PCKT INFO
+FCS: true CORR: 1 BUFF_OVERFLOW: false GENERIC: false 
+PCKT NUM(4): [b'\x12', b'\x00', b'\x00', b'\x00'] = 18
+TIME(8): [b'*', b'%', b'\xd7', b'`', b'\x00', b'\x00', b'\x00', b'\x00'] = 50772265.3125 micro(s)
 LEN(2): [b'\x16', b'\x00'] = 22
-PAYLOAD(21): [b'#', b'\xc8', b'\t', b'\x01', b'\x00', b'\xbb', b'\xaa', b'\xff', b'\xff', b'\xcf', b'\\', b'\xa7', b'\x1c', b'\x00', b'K', b'\x12', b'\x00', b'\x01', b'\x80', b'\xe8', b'\xe3']
+PAYLOAD(21): [b'#', b'\xc8', b'\xd5', b'\x01', b'\x00', b'\xbb', b'\xaa', b'\xff', b'\xff', b'v', b'B', b'\xf6', b'\x14', b'\x00', b'K', b'\x12', b'\x00', b'\x01', b'\x80', b'\xf4', b'\xd7']
+Add Mode: 11000100 00010011
 	Dest PAN: 0x0001
 	Dest Add: 0xaabb
 	Src PAN: 0xffff
-	Src Add: 0x00124b001ca75ccf
-RSSI(BYTE 1): -97
+	Src Add: 0x00124b0014f64276
+RSSI(BYTE 1): -85
 CRC OK (BYTE 2, bit7): 1
 STATUS(2): [RSSI: b'\x00', CORR/LQI: b'\x00']
 SPARE(112): [b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00']
 ================
 PCKT INFO
 FCS: true CORR: 1 BUFF_OVERFLOW: false GENERIC: false 
-PCKT NUM(4): [b'\n', b'\x00', b'\x00', b'\x00'] = 10
-TIME(8): [b'\xae', b'\xdd', b'\x82', b':', b'\x00', b'\x00', b'\x00', b'\x00'] = 30676717.4375 micro(s)
+PCKT NUM(4): [b'\x13', b'\x00', b'\x00', b'\x00'] = 19
+TIME(8): [b'\x1e', b'\xa9', b'\xd7', b'`', b'\x00', b'\x00', b'\x00', b'\x00'] = 50773320.9375 micro(s)
+LEN(2): [b'\x06', b'\x00'] = 6
+PAYLOAD(5): [b'\x02', b'\x00', b'\xd5', b'\xea', b'\xd7']
+Add Mode: 01000000 00000000
+RSSI(BYTE 1): -95
+CRC OK (BYTE 2, bit7): 1
+STATUS(2): [RSSI: b'\x00', CORR/LQI: b'\x00']
+SPARE(128): [b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00']
+================
+PCKT INFO
+FCS: true CORR: 1 BUFF_OVERFLOW: false GENERIC: false 
+PCKT NUM(4): [b'\x14', b'\x00', b'\x00', b'\x00'] = 20
+TIME(8): [b'\xc2', b'|', b'\xf4', b'`', b'\x00', b'\x00', b'\x00', b'\x00'] = 50832358.0625 micro(s)
+LEN(2): [b'\x13', b'\x00'] = 19
+PAYLOAD(18): [b'c', b'\xc8', b'\x7f', b'\x01', b'\x00', b'\xbb', b'\xaa', b'$', b'\x97', b'\xa1', b'\x1c', b'\x00', b'K', b'\x12', b'\x00', b'\x04', b'\xee', b'\xd7']
+Add Mode: 11000110 00010011
+	Dest PAN: 0x0001
+	Dest Add: 0xaabb
+	Src Add: 0x00124b001ca19724
+RSSI(BYTE 1): -91
+CRC OK (BYTE 2, bit7): 1
+STATUS(2): [RSSI: b'\x00', CORR/LQI: b'\x00']
+SPARE(115): [b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00']
+================
+PCKT INFO
+FCS: true CORR: 1 BUFF_OVERFLOW: false GENERIC: false 
+PCKT NUM(4): [b'\x15', b'\x00', b'\x00', b'\x00'] = 21
+TIME(8): [b'\xba', b'\xf4', b'\xf4', b'`', b'\x00', b'\x00', b'\x00', b'\x00'] = 50833317.8125 micro(s)
+LEN(2): [b'\x06', b'\x00'] = 6
+PAYLOAD(5): [b'\x12', b'\x00', b'\x7f', b'\xeb', b'\xd7']
+Add Mode: 01001000 00000000
+RSSI(BYTE 1): -94
+CRC OK (BYTE 2, bit7): 1
+STATUS(2): [RSSI: b'\x00', CORR/LQI: b'\x00']
+SPARE(128): [b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00']
+================
+PCKT INFO
+FCS: true CORR: 1 BUFF_OVERFLOW: false GENERIC: false 
+PCKT NUM(4): [b'\x16', b'\x00', b'\x00', b'\x00'] = 22
+TIME(8): [b'R', b'\xf0', b'\xf5', b'`', b'\x00', b'\x00', b'\x00', b'\x00'] = 50835330.5625 micro(s)
+LEN(2): [b'\x1c', b'\x00'] = 28
+PAYLOAD(27): [b'c', b'\xcc', b'L', b'\x01', b'\x00', b'$', b'\x97', b'\xa1', b'\x1c', b'\x00', b'K', b'\x12', b'\x00', b'\x92', b'B', b'\xf6', b'\x14', b'\x00', b'K', b'\x12', b'\x00', b'\x02', b'\x01', b'\x00', b'\x00', b'\xeb', b'\xd7']
+Add Mode: 11000110 00110011
+	Dest PAN: 0x0001
+	Dest Add: 0x00124b001ca19724
+	Src Add: 0x00124b0014f64292
+RSSI(BYTE 1): -94
+CRC OK (BYTE 2, bit7): 1
+STATUS(2): [RSSI: b'\x00', CORR/LQI: b'\x00']
+SPARE(106): [b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00']
+================
+PCKT INFO
+FCS: true CORR: 1 BUFF_OVERFLOW: false GENERIC: false 
+PCKT NUM(4): [b'\x17', b'\x00', b'\x00', b'\x00'] = 23
+TIME(8): [b'J', b'\x8c', b'\xf6', b'`', b'\x00', b'\x00', b'\x00', b'\x00'] = 50836578.3125 micro(s)
+LEN(2): [b'\x06', b'\x00'] = 6
+PAYLOAD(5): [b'\x02', b'\x00', b'L', b'\xee', b'\xd7']
+Add Mode: 01000000 00000000
+RSSI(BYTE 1): -91
+CRC OK (BYTE 2, bit7): 1
+STATUS(2): [RSSI: b'\x00', CORR/LQI: b'\x00']
+SPARE(128): [b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00']
+================
+PCKT INFO
+FCS: true CORR: 1 BUFF_OVERFLOW: false GENERIC: false 
+PCKT NUM(4): [b'\x18', b'\x00', b'\x00', b'\x00'] = 24
+TIME(8): [b'B', b'@', b'\xf8', b'`', b'\x00', b'\x00', b'\x00', b'\x00'] = 50840066.0625 micro(s)
+LEN(2): [b'\r', b'\x00'] = 13
+PAYLOAD(12): [b'c', b'\x88', b'\x80', b'\x01', b'\x00', b'\xbb', b'\xaa', b'\x01', b'\x00', b'\x04', b'\xee', b'\xd7']
+Add Mode: 11000110 00010001
+	Dest PAN: 0x0001
+	Dest Add: 0xaabb
+	Src Add: 0x0001
+RSSI(BYTE 1): -91
+CRC OK (BYTE 2, bit7): 1
+STATUS(2): [RSSI: b'\x00', CORR/LQI: b'\x00']
+SPARE(121): [b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00']
+================
+PCKT INFO
+FCS: true CORR: 1 BUFF_OVERFLOW: false GENERIC: false 
+PCKT NUM(4): [b'\x19', b'\x00', b'\x00', b'\x00'] = 25
+TIME(8): [b':', b'\xa0', b'\xf8', b'`', b'\x00', b'\x00', b'\x00', b'\x00'] = 50840833.8125 micro(s)
+LEN(2): [b'\x06', b'\x00'] = 6
+PAYLOAD(5): [b'\x02', b'\x00', b'\x80', b'\xeb', b'\xd7']
+Add Mode: 01000000 00000000
+RSSI(BYTE 1): -94
+CRC OK (BYTE 2, bit7): 1
+STATUS(2): [RSSI: b'\x00', CORR/LQI: b'\x00']
+SPARE(128): [b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00']
+================
+PCKT INFO
+FCS: true CORR: 1 BUFF_OVERFLOW: false GENERIC: false 
+PCKT NUM(4): [b'\x1a', b'\x00', b'\x00', b'\x00'] = 26
+TIME(8): [b'R', b'\xc5', b'P', b'a', b'\x00', b'\x00', b'\x00', b'\x00'] = 51021354.5625 micro(s)
+LEN(2): [b'\x13', b'\x00'] = 19
+PAYLOAD(18): [b'c', b'\xc8', b'\xd6', b'\x01', b'\x00', b'\xbb', b'\xaa', b'v', b'B', b'\xf6', b'\x14', b'\x00', b'K', b'\x12', b'\x00', b'\x04', b'\xf7', b'\xd7']
+Add Mode: 11000110 00010011
+	Dest PAN: 0x0001
+	Dest Add: 0xaabb
+	Src Add: 0x00124b0014f64276
+RSSI(BYTE 1): -82
+CRC OK (BYTE 2, bit7): 1
+STATUS(2): [RSSI: b'\x00', CORR/LQI: b'\x00']
+SPARE(115): [b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00']
+================
+PCKT INFO
+FCS: true CORR: 1 BUFF_OVERFLOW: false GENERIC: false 
+PCKT NUM(4): [b'\x1b', b'\x00', b'\x00', b'\x00'] = 27
+TIME(8): [b'F', b'=', b'Q', b'a', b'\x00', b'\x00', b'\x00', b'\x00'] = 51022314.1875 micro(s)
+LEN(2): [b'\x06', b'\x00'] = 6
+PAYLOAD(5): [b'\x12', b'\x00', b'\xd6', b'\xeb', b'\xd7']
+Add Mode: 01001000 00000000
+RSSI(BYTE 1): -94
+CRC OK (BYTE 2, bit7): 1
+STATUS(2): [RSSI: b'\x00', CORR/LQI: b'\x00']
+SPARE(128): [b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00']
+================
+PCKT INFO
+FCS: true CORR: 1 BUFF_OVERFLOW: false GENERIC: false 
+PCKT NUM(4): [b'\x1c', b'\x00', b'\x00', b'\x00'] = 28
+TIME(8): [b'\xf2', b'\xb0', b'R', b'a', b'\x00', b'\x00', b'\x00', b'\x00'] = 51025287.5625 micro(s)
+LEN(2): [b'\x1c', b'\x00'] = 28
+PAYLOAD(27): [b'c', b'\xcc', b'M', b'\x01', b'\x00', b'v', b'B', b'\xf6', b'\x14', b'\x00', b'K', b'\x12', b'\x00', b'\x92', b'B', b'\xf6', b'\x14', b'\x00', b'K', b'\x12', b'\x00', b'\x02', b'\x02', b'\x00', b'\x00', b'\xec', b'\xd7']
+Add Mode: 11000110 00110011
+	Dest PAN: 0x0001
+	Dest Add: 0x00124b0014f64276
+	Src Add: 0x00124b0014f64292
+RSSI(BYTE 1): -93
+CRC OK (BYTE 2, bit7): 1
+STATUS(2): [RSSI: b'\x00', CORR/LQI: b'\x00']
+SPARE(106): [b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00']
+================
+PCKT INFO
+FCS: true CORR: 1 BUFF_OVERFLOW: false GENERIC: false 
+PCKT NUM(4): [b'\x1d', b'\x00', b'\x00', b'\x00'] = 29
+TIME(8): [b'\xee', b'L', b'S', b'a', b'\x00', b'\x00', b'\x00', b'\x00'] = 51026535.4375 micro(s)
+LEN(2): [b'\x06', b'\x00'] = 6
+PAYLOAD(5): [b'\x02', b'\x00', b'M', b'\xf7', b'\xd7']
+Add Mode: 01000000 00000000
+RSSI(BYTE 1): -82
+CRC OK (BYTE 2, bit7): 1
+STATUS(2): [RSSI: b'\x00', CORR/LQI: b'\x00']
+SPARE(128): [b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00']
+================
+PCKT INFO
+FCS: true CORR: 1 BUFF_OVERFLOW: false GENERIC: false 
+PCKT NUM(4): [b'\x1e', b'\x00', b'\x00', b'\x00'] = 30
+TIME(8): [b'>', b'k', b'V', b'a', b'\x00', b'\x00', b'\x00', b'\x00'] = 51032921.9375 micro(s)
+LEN(2): [b'\r', b'\x00'] = 13
+PAYLOAD(12): [b'c', b'\xcf', b'\xd7', b'\x01', b'\x00', b'\xbb', b'\xaa', b'\x02', b'\x00', b'\x04', b'\xf7', b'W']
+Add Mode: 11000110 11110011
+	Dest PAN: 0x0001
+	Dest Add: 0x57f7040002aabb
+	Src Add: 0x
+RSSI(BYTE 1): -82
+CRC OK (BYTE 2, bit7): 0
+STATUS(2): [RSSI: b'\x00', CORR/LQI: b'\x00']
+SPARE(121): [b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00']
+================
+PCKT INFO
+FCS: true CORR: 1 BUFF_OVERFLOW: false GENERIC: false 
+PCKT NUM(4): [b'\x1f', b'\x00', b'\x00', b'\x00'] = 31
+TIME(8): [b':', b'\xcb', b'V', b'a', b'\x00', b'\x00', b'\x00', b'\x00'] = 51033689.8125 micro(s)
+LEN(2): [b'\x06', b'\x00'] = 6
+PAYLOAD(5): [b'\x02', b'\x00', b'\xd7', b'\xeb', b'\xd7']
+Add Mode: 01000000 00000000
+RSSI(BYTE 1): -94
+CRC OK (BYTE 2, bit7): 1
+STATUS(2): [RSSI: b'\x00', CORR/LQI: b'\x00']
+SPARE(128): [b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00']
+================
+PCKT INFO
+FCS: true CORR: 1 BUFF_OVERFLOW: false GENERIC: false 
+PCKT NUM(4): [b' ', b'\x00', b'\x00', b'\x00'] = 32
+TIME(8): [b'z', b'\x1c', b'v', b'd', b'\x00', b'\x00', b'\x00', b'\x00'] = 52670691.8125 micro(s)
+LEN(2): [b'\x0b', b'\x00'] = 11
+PAYLOAD(10): [b'\x03', b'\x08', b'\xec', b'\xff', b'\xff', b'\xff', b'\xff', b'\x07', b'\xec', b'\xd7']
+Add Mode: 11000000 00010000
+	Dest PAN: 0xffff
+RSSI(BYTE 1): -93
+CRC OK (BYTE 2, bit7): 1
+STATUS(2): [RSSI: b'\x00', CORR/LQI: b'\x00']
+SPARE(123): [b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00']
+================
+PCKT INFO
+FCS: true CORR: 1 BUFF_OVERFLOW: false GENERIC: false 
+PCKT NUM(4): [b'!', b'\x00', b'\x00', b'\x00'] = 33
+TIME(8): [b'2', b'\x8f', b'w', b'd', b'\x00', b'\x00', b'\x00', b'\x00'] = 52673657.5625 micro(s)
+LEN(2): [b'\x0e', b'\x00'] = 14
+PAYLOAD(13): [b'\x00', b'\x80', b'E', b'\x01', b'\x00', b'\xbb', b'\xaa', b'\xff', b'\xcf', b'\x00', b'\x00', b'\xed', b'\xd7']
+Add Mode: 00000000 00000001
+	Src PAN: 0x0001
+	Src Add: 0xaabb
+RSSI(BYTE 1): -92
+CRC OK (BYTE 2, bit7): 1
+STATUS(2): [RSSI: b'\x00', CORR/LQI: b'\x00']
+SPARE(120): [b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00']
+================
+PCKT INFO
+FCS: true CORR: 1 BUFF_OVERFLOW: false GENERIC: false 
+PCKT NUM(4): [b'"', b'\x00', b'\x00', b'\x00'] = 34
+TIME(8): [b'\xc2', b'\\', b'\xa2', b'f', b'\x00', b'\x00', b'\x00', b'\x00'] = 53809894.0625 micro(s)
+LEN(2): [b'X', b'\x00'] = 88
+PAYLOAD(87): [b'W', b'\x98', b'\x81', b'\x01', b'\x00', b'\xbb', b'\xaa', b'\x01', b'\x00', b'\x1d', b'\x19', b'\x00', b'\x00', b'\x00', b'3', b'3', b'3', b'3', b'3', b'3', b'3', b'3', b'\x03', b')', b'\x99', b'\xdd', b'4', b'\x84', b'\xf4', b'f', b'\x04', b'\x08', b'\x9b', b'2', b'K', b'>', b'd', b'\xc5', b'O', b'\x01', b'\xfc', b'(', b'4', b'\xb0', b'\x9f', b'\x80', b'\\', b'[', b'\xb2', b'x', b'?', b';', b'M', b'\xc9', b'\x1b', b'\x12', b'4', b'\xf0', b'\xac', b'\xe3', b'`', b'\xfe', b'\x0b', b'\x80', b'j', b'\xb5', b'%', b'\xb7', b'\xca', b'\x93', b'\xc9', b'\xfd', b'\xe5', b'g', b'\xc9', b'\x18', b'I', b'\x06', b'\x19', b'\xb1', b'Q', b'\x06', b'\xa4', b'\xda', b'\xc2', b'd', b'\xbb']
+Add Mode: 11101010 00011001
+RSSI(BYTE 1): 27
+CRC OK (BYTE 2, bit7): 1
+STATUS(2): [RSSI: b'\x00', CORR/LQI: b'\x00']
+SPARE(46): [b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00']
+================
+PCKT INFO
+FCS: true CORR: 1 BUFF_OVERFLOW: false GENERIC: false 
+PCKT NUM(4): [b'#', b'\x00', b'\x00', b'\x00'] = 35
+TIME(8): [b'\xdc', b'[', b'\xa5', b'f', b'\x00', b'\x00', b'\x00', b'\x00'] = 53816030.875 micro(s)
+LEN(2): [b'e', b'\x00'] = 101
+PAYLOAD(100): [b'i', b'\x98', b'\x81', b'\x01', b'\x00', b'\xbb', b'\xaa', b'\x01', b'\x00', b'\x1d', b'\x19', b'\x00', b'\x00', b'\x00', b'3', b'3', b'3', b'3', b'3', b'3', b'3', b'3', b'\x03', b')', b'\x99', b'\xdd', b'4', b'\x84', b'\xf4', b'f', b'\x04', b'\x08', b'\x9b', b'2', b'K', b'>', b'd', b'\xc5', b'O', b'\x01', b'\xfc', b'(', b'4', b'\xb0', b'\x9f', b'\x80', b'\\', b'[', b'\xb2', b'x', b'?', b';', b'M', b'\xc9', b'\x1b', b'\x12', b'4', b'\xf0', b'\xac', b'\xe3', b'`', b'\xfe', b'\x0b', b'\x80', b'j', b'\xb5', b'%', b'\xb7', b'\xca', b'\x93', b'\xc9', b'\xfd', b'\xe5', b'g', b'\xc9', b'\x18', b'I', b'\x06', b'\x19', b'\xb1', b'Q', b'\x06', b'\xa4', b'\xda', b'\xc2', b'd', b'\xbb', b'\xc0', b'\xd1', b'6', b'|', b'\xa3', b'\xde', b'\xfb', b'\xc9', b'm', b'\xcf', b'a', b'\xec', b'\xeb']
+Add Mode: 10010110 00011001
+	Dest PAN: 0x0001
+	Dest Add: 0xaabb
+	Src Add: 0x0001
+RSSI(BYTE 1): -93
+CRC OK (BYTE 2, bit7): 1
+STATUS(2): [RSSI: b'\x00', CORR/LQI: b'\x00']
+SPARE(33): [b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00']
+================
+PCKT INFO
+FCS: true CORR: 1 BUFF_OVERFLOW: false GENERIC: false 
+PCKT NUM(4): [b'$', b'\x00', b'\x00', b'\x00'] = 36
+TIME(8): [b'\xd3', b'\x1b', b'\xa7', b'f', b'\x00', b'\x00', b'\x00', b'\x00'] = 53819614.59375 micro(s)
+LEN(2): [b'\x06', b'\x00'] = 6
+PAYLOAD(5): [b'\x02', b'\x00', b'\x81', b'\xeb', b'\xea']
+Add Mode: 01000000 00000000
+RSSI(BYTE 1): -94
+CRC OK (BYTE 2, bit7): 1
+STATUS(2): [RSSI: b'\x00', CORR/LQI: b'\x00']
+SPARE(128): [b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00']
+================
+PCKT INFO
+FCS: true CORR: 1 BUFF_OVERFLOW: false GENERIC: false 
+PCKT NUM(4): [b'%', b'\x00', b'\x00', b'\x00'] = 37
+TIME(8): [b'#', b'\x02', b'Y', b'h', b'\x00', b'\x00', b'\x00', b'\x00'] = 54708241.09375 micro(s)
 LEN(2): [b'\x16', b'\x00'] = 22
-PAYLOAD(21): [b'#', b'\xc8', b'\t', b'\x01', b'\x00', b'\xbb', b'\xaa', b'\xff', b'\xff', b'\xcf', b'\\', b'\xa7', b'\x1c', b'\x00', b'K', b'\x12', b'\x00', b'\x01', b'\x80', b'\xe8', b'\xe3']
+PAYLOAD(21): [b'#', b'\xc8', b'\xf0', b'\x01', b'\x00', b'\xbb', b'\xaa', b'\xff', b'\xff', b'\xc7', b'A', b'\xf6', b'\x14', b'\x00', b'K', b'\x12', b'\x00', b'\x01', b'\x80', b'\xef', b'\xea']
+Add Mode: 11000100 00010011
 	Dest PAN: 0x0001
 	Dest Add: 0xaabb
 	Src PAN: 0xffff
-	Src Add: 0x00124b001ca75ccf
-RSSI(BYTE 1): -97
+	Src Add: 0x00124b0014f641c7
+RSSI(BYTE 1): -90
 CRC OK (BYTE 2, bit7): 1
 STATUS(2): [RSSI: b'\x00', CORR/LQI: b'\x00']
 SPARE(112): [b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00']
+================
+PCKT INFO
+FCS: true CORR: 1 BUFF_OVERFLOW: false GENERIC: false 
+PCKT NUM(4): [b'&', b'\x00', b'\x00', b'\x00'] = 38
+TIME(8): [b' ', b'\x86', b'Y', b'h', b'\x00', b'\x00', b'\x00', b'\x00'] = 54709297.0 micro(s)
+LEN(2): [b'\x06', b'\x00'] = 6
+PAYLOAD(5): [b'\x02', b'\x00', b'\xf0', b'\xeb', b'\xea']
+Add Mode: 01000000 00000000
+RSSI(BYTE 1): -94
+CRC OK (BYTE 2, bit7): 1
+STATUS(2): [RSSI: b'\x00', CORR/LQI: b'\x00']
+SPARE(128): [b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00']
+================
+PCKT INFO
+FCS: true CORR: 1 BUFF_OVERFLOW: false GENERIC: false 
+PCKT NUM(4): [b"'", b'\x00', b'\x00', b'\x00'] = 39
+TIME(8): [b'S', b'\x1a', b'\xd3', b'h', b'\x00', b'\x00', b'\x00', b'\x00'] = 54958290.59375 micro(s)
+LEN(2): [b'\x13', b'\x00'] = 19
+PAYLOAD(18): [b'c', b'\xc8', b'\xf1', b'\x01', b'\x00', b'\xbb', b'\xaa', b'\xc7', b'A', b'\xf6', b'\x14', b'\x00', b'K', b'\x12', b'\x00', b'\x04', b'\xee', b'\xea']
+Add Mode: 11000110 00010011
+	Dest PAN: 0x0001
+	Dest Add: 0xaabb
+	Src Add: 0x00124b0014f641c7
+RSSI(BYTE 1): -91
+CRC OK (BYTE 2, bit7): 1
+STATUS(2): [RSSI: b'\x00', CORR/LQI: b'\x00']
+SPARE(115): [b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00']
+================
+PCKT INFO
+FCS: true CORR: 1 BUFF_OVERFLOW: false GENERIC: false 
+PCKT NUM(4): [b'(', b'\x00', b'\x00', b'\x00'] = 40
+TIME(8): [b'K', b'\x92', b'\xd3', b'h', b'\x00', b'\x00', b'\x00', b'\x00'] = 54959250.34375 micro(s)
+LEN(2): [b'\x06', b'\x00'] = 6
+PAYLOAD(5): [b'\x12', b'\x00', b'\xf1', b'\xe9', b'\xea']
+Add Mode: 01001000 00000000
+RSSI(BYTE 1): -96
+CRC OK (BYTE 2, bit7): 1
+STATUS(2): [RSSI: b'\x00', CORR/LQI: b'\x00']
+SPARE(128): [b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00']
+================
+PCKT INFO
+FCS: true CORR: 1 BUFF_OVERFLOW: false GENERIC: false 
+PCKT NUM(4): [b')', b'\x00', b'\x00', b'\x00'] = 41
+TIME(8): [b'\xdb', b'\xef', b'\xd3', b'h', b'\x00', b'\x00', b'\x00', b'\x00'] = 54959998.84375 micro(s)
+LEN(2): [b'\x1c', b'\x00'] = 28
+PAYLOAD(27): [b'c', b'\xcc', b'O', b'\x01', b'\x00', b'\xc7', b'A', b'\xf6', b'\x14', b'\x00', b'K', b'\x12', b'\x00', b'\x92', b'B', b'\xf6', b'\x14', b'\x00', b'K', b'\x12', b'\x00', b'\x02', b'\x03', b'\x00', b'\x00', b'\xea', b'\xea']
+Add Mode: 11000110 00110011
+	Dest PAN: 0x0001
+	Dest Add: 0x00124b0014f641c7
+	Src Add: 0x00124b0014f64292
+RSSI(BYTE 1): -95
+CRC OK (BYTE 2, bit7): 1
+STATUS(2): [RSSI: b'\x00', CORR/LQI: b'\x00']
+SPARE(106): [b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00']
+================
+PCKT INFO
+FCS: true CORR: 1 BUFF_OVERFLOW: false GENERIC: false 
+PCKT NUM(4): [b'*', b'\x00', b'\x00', b'\x00'] = 42
+TIME(8): [b'\xd8', b'\x8b', b'\xd4', b'h', b'\x00', b'\x00', b'\x00', b'\x00'] = 54961246.75 micro(s)
+LEN(2): [b'\x06', b'\x00'] = 6
+PAYLOAD(5): [b'\x02', b'\x00', b'O', b'\xee', b'\xea']
+Add Mode: 01000000 00000000
+RSSI(BYTE 1): -91
+CRC OK (BYTE 2, bit7): 1
+STATUS(2): [RSSI: b'\x00', CORR/LQI: b'\x00']
+SPARE(128): [b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00']
+================
+PCKT INFO
+FCS: true CORR: 1 BUFF_OVERFLOW: false GENERIC: false 
+PCKT NUM(4): [b'+', b'\x00', b'\x00', b'\x00'] = 43
+TIME(8): [b'`', b'\xdc', b'\xd7', b'h', b'\x00', b'\x00', b'\x00', b'\x00'] = 54968035.0 micro(s)
+LEN(2): [b'\r', b'\x00'] = 13
+PAYLOAD(12): [b'c', b'\x88', b'\xf2', b'\x01', b'\x00', b'\xbb', b'\xaa', b'\x03', b'\x00', b'\x04', b'\xee', b'\xea']
+Add Mode: 11000110 00010001
+	Dest PAN: 0x0001
+	Dest Add: 0xaabb
+	Src Add: 0x0003
+RSSI(BYTE 1): -91
+CRC OK (BYTE 2, bit7): 1
+STATUS(2): [RSSI: b'\x00', CORR/LQI: b'\x00']
+SPARE(121): [b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00']
+================
+PCKT INFO
+FCS: true CORR: 1 BUFF_OVERFLOW: false GENERIC: false 
+PCKT NUM(4): [b',', b'\x00', b'\x00', b'\x00'] = 44
+TIME(8): [b'[', b'<', b'\xd8', b'h', b'\x00', b'\x00', b'\x00', b'\x00'] = 54968802.84375 micro(s)
+LEN(2): [b'\x06', b'\x00'] = 6
+PAYLOAD(5): [b'\x02', b'\x00', b'\xf2', b'\xe8', b'\xea']
+Add Mode: 01000000 00000000
+RSSI(BYTE 1): -97
+CRC OK (BYTE 2, bit7): 1
+STATUS(2): [RSSI: b'\x00', CORR/LQI: b'\x00']
+SPARE(128): [b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00']
+================
+PCKT INFO
+FCS: true CORR: 1 BUFF_OVERFLOW: false GENERIC: false 
+PCKT NUM(4): [b'-', b'\x00', b'\x00', b'\x00'] = 45
+TIME(8): [b'x', b'l', b'\x8c', b'l', b'\x00', b'\x00', b'\x00', b'\x00'] = 56910691.75 micro(s)
+LEN(2): [b'\x0b', b'\x00'] = 11
+PAYLOAD(10): [b'\x03', b'\x08', b'\x93', b'\xff', b'\xff', b'\xff', b'\xff', b'\x07', b'\xee', b'\xea']
+Add Mode: 11000000 00010000
+	Dest PAN: 0xffff
+RSSI(BYTE 1): -91
+CRC OK (BYTE 2, bit7): 1
+STATUS(2): [RSSI: b'\x00', CORR/LQI: b'\x00']
+SPARE(123): [b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00']
+================
+PCKT INFO
+FCS: true CORR: 1 BUFF_OVERFLOW: false GENERIC: false 
+PCKT NUM(4): [b'.', b'\x00', b'\x00', b'\x00'] = 46
+TIME(8): [b'\x13', b'\x90', b'\x8d', b'l', b'\x00', b'\x00', b'\x00', b'\x00'] = 56913024.59375 micro(s)
+LEN(2): [b'\x10', b'\x00'] = 16
+PAYLOAD(15): [b'\x00', b'\x80', b'F', b'\x01', b'\x00', b'\xbb', b'\xaa', b'\xff', b'\xcf', b'\x00', b'\x01', b'\x01', b'\x00', b'\xeb', b'\xea']
+Add Mode: 00000000 00000001
+	Src PAN: 0x0001
+	Src Add: 0xaabb
+RSSI(BYTE 1): -94
+CRC OK (BYTE 2, bit7): 1
+STATUS(2): [RSSI: b'\x00', CORR/LQI: b'\x00']
+SPARE(118): [b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00']
+================
+PCKT INFO
+FCS: true CORR: 1 BUFF_OVERFLOW: false GENERIC: false 
+PCKT NUM(4): [b'/', b'\x00', b'\x00', b'\x00'] = 47
+TIME(8): [b'x', b'\xc3', b'n', b'p', b'\x00', b'\x00', b'\x00', b'\x00'] = 58947099.75 micro(s)
+LEN(2): [b'\x16', b'\x00'] = 22
+PAYLOAD(21): [b'#', b'\xc8', b'\x97', b'\x01', b'\x00', b'\xbb', b'\xaa', b'\xff', b'\xff', b'G', b'r', b'\xa1', b'\x1c', b'\x00', b'K', b'\x12', b'\x00', b'\x01', b'\x80', b'\xf2', b'\xea']
+Add Mode: 11000100 00010011
+	Dest PAN: 0x0001
+	Dest Add: 0xaabb
+	Src PAN: 0xffff
+	Src Add: 0x00124b001ca17247
+RSSI(BYTE 1): -87
+CRC OK (BYTE 2, bit7): 1
+STATUS(2): [RSSI: b'\x00', CORR/LQI: b'\x00']
+SPARE(112): [b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00']
+================
+PCKT INFO
+FCS: true CORR: 1 BUFF_OVERFLOW: false GENERIC: false 
+PCKT NUM(4): [b'0', b'\x00', b'\x00', b'\x00'] = 48
+TIME(8): [b'k', b'G', b'o', b'p', b'\x00', b'\x00', b'\x00', b'\x00'] = 58948155.34375 micro(s)
+LEN(2): [b'\x06', b'\x00'] = 6
+PAYLOAD(5): [b'\x02', b'\x00', b'\x97', b'\xeb', b'\xea']
+Add Mode: 01000000 00000000
+RSSI(BYTE 1): -94
+CRC OK (BYTE 2, bit7): 1
+STATUS(2): [RSSI: b'\x00', CORR/LQI: b'\x00']
+SPARE(128): [b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00']
+================
+PCKT INFO
+FCS: true CORR: 1 BUFF_OVERFLOW: false GENERIC: false 
+PCKT NUM(4): [b'1', b'\x00', b'\x00', b'\x00'] = 49
+TIME(8): [b'\xb3', b'c', b'\xe8', b'p', b'\x00', b'\x00', b'\x00', b'\x00'] = 59196189.59375 micro(s)
+LEN(2): [b'\x13', b'\x00'] = 19
+PAYLOAD(18): [b'c', b'\xc8', b'\x98', b'\x01', b'\x00', b'\xbb', b'\xaa', b'G', b'r', b'\xa1', b'\x1c', b'\x00', b'K', b'\x12', b'\x00', b'\x04', b'\xf3', b'\xea']
+Add Mode: 11000110 00010011
+	Dest PAN: 0x0001
+	Dest Add: 0xaabb
+	Src Add: 0x00124b001ca17247
+RSSI(BYTE 1): -86
+CRC OK (BYTE 2, bit7): 1
+STATUS(2): [RSSI: b'\x00', CORR/LQI: b'\x00']
+SPARE(115): [b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00']
+================
+PCKT INFO
+FCS: true CORR: 1 BUFF_OVERFLOW: false GENERIC: false 
+PCKT NUM(4): [b'2', b'\x00', b'\x00', b'\x00'] = 50
+TIME(8): [b'\xb3', b'\xdb', b'\xe8', b'p', b'\x00', b'\x00', b'\x00', b'\x00'] = 59197149.59375 micro(s)
+LEN(2): [b'\x06', b'\x00'] = 6
+PAYLOAD(5): [b'\x12', b'\x00', b'\x98', b'\xec', b'\xea']
+Add Mode: 01001000 00000000
+RSSI(BYTE 1): -93
+CRC OK (BYTE 2, bit7): 1
+STATUS(2): [RSSI: b'\x00', CORR/LQI: b'\x00']
+SPARE(128): [b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00', b'\x00']

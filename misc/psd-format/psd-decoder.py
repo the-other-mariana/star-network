@@ -2,7 +2,7 @@ import numpy as np
 from fcf_type_codes import TYPES as fcft
 import pandas as pd
 
-filename = 'tests/TestControl_150422.psd'
+filename = 'tests/TestWireless_1_160422.psd'
 file = open(filename,'rb')
 mybyte = file.read(1)
 
@@ -43,7 +43,7 @@ first = True
 # 11(-73) = -62, 9(-73) = -64, 10(-73) = -63 (RSSI)
 
 while mybyte:
-    if c == 10: break
+    if c == 50: break
     # first byte: PACKET INFO
     if p == 1:
 
@@ -129,10 +129,71 @@ while mybyte:
         if p == ((((1 + NUM) + TS) + LEN + 1) + N): # (16 + N)
             s += f"PAYLOAD({N}): {pckt_payload}\n"
 
-            binary_string = "{:08b}".format(int(pckt_payload[0].hex(), 16))[::-1]
+            byte0 = "{:08b}".format(int(pckt_payload[0].hex(), 16))[::-1]
+            byte1 = "{:08b}".format(int(pckt_payload[1].hex(), 16))[::-1]
             # frame control field
             # Bit0-2: TYPE (invert)
-            fcf_type = binary_string[:3][::-1]
+            fcf_type = byte0[:3][::-1]
+            pan_compr = byte0[6]
+            dest_add_mode = ''.join([byte1[3], byte1[2]])
+            src_add_mode = ''.join([byte1[7], byte1[6]])
+            s += f"Add Mode: {byte0} {byte1}\n"
+            b = 3
+
+            if fcf_type == fcft['CMD'] or fcf_type == fcft['DATA'] or fcf_type == fcft['BCN']:
+                key = fcft.keys()[fcft.values().index(fcf_type)]
+                row['FRAME_TYPE'] = key
+                if dest_add_mode != '00':
+                    dest_pan = b''.join([pckt_payload[b + 1], pckt_payload[b]])
+                    row['DEST_PAN'] = '0x' + dest_pan.hex()
+                    s += f"\tDest PAN: {'0x' + dest_pan.hex()}\n"
+                    b += 2
+                if dest_add_mode != '00' and src_add_mode != '00':
+                    if dest_add_mode == '11':
+                        # long address
+                        dest_add = b''.join(pckt_payload[b:(b + LONG_LENGTH)][::-1])
+                        row['DEST_ADD'] = '0x' + dest_add.hex()
+                        s += f"\tDest Add: {'0x' + dest_add.hex()}\n"
+                        b += 8
+                    else:
+                        # short address
+                        dest_add = b''.join([pckt_payload[b + 1], pckt_payload[b]])
+                        row['DEST_ADD'] = '0x' + dest_add.hex()
+                        s += f"\tDest Add: {'0x' + dest_add.hex()}\n"
+                        b += 2
+                if src_add_mode != '00' and pan_compr == '0':
+                    src_pan = b''.join([pckt_payload[b + 1], pckt_payload[b]])
+                    row['SRC_PAN'] = '0x' + src_pan.hex()
+                    s += f"\tSrc PAN: {'0x' + src_pan.hex()}\n"
+                    b += 2
+                if src_add_mode != '00':
+                    if src_add_mode == '11':
+                        # long address
+                        src_add = b''.join(pckt_payload[b:(b + LONG_LENGTH)][::-1])
+                        row['SRC_ADD'] = '0x' + src_add.hex()
+                        s += f"\tSrc Add: {'0x' + src_add.hex()}\n"
+                        b += 8
+                    else:
+                        # short address
+                        src_add = b''.join([pckt_payload[b + 1], pckt_payload[b]])
+                        row['SRC_ADD'] = '0x' + src_add.hex()
+                        s += f"\tSrc Add: {'0x' + src_add.hex()}\n"
+                        b += 2
+            # type ACK: 1 length: 5
+            if fcf_type == fcft['ACK']:
+                if len(pckt_payload) == 5:
+                    # no fields with addresses
+                    row['FRAME_TYPE'] = 'ACK'
+                    pass
+                else:
+                    row['FRAME_TYPE'] = 'ACK'
+                    s += f"ACK packet with unexpected length\n"
+            # type R111, R100
+            if fcf_type not in [fcft['DATA'], fcft['CMD'], fcft['BCN'], fcft['ACK']]:
+                row['FRAME_TYPE'] = fcf_type
+
+
+            '''
             # type CMD: 5 lengths: 10, 21, 18, 27, 12
             if fcf_type == fcft['CMD']:
                 if len(pckt_payload) == 10:
@@ -244,6 +305,7 @@ while mybyte:
                 row['DEST_ADD'] = '0x' + dest_add.hex()
                 row['SRC_PAN'] = ''
                 row['SRC_ADD'] = '0x' + src_add.hex()
+            '''
 
             # failed tests for rssi (?)
             ba = bytearray(pckt_payload[-2])
