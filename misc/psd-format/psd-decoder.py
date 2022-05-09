@@ -43,7 +43,7 @@ first = True
 # 11(-73) = -62, 9(-73) = -64, 10(-73) = -63 (RSSI)
 
 while mybyte:
-    if c == 50: break
+    if c == 150: break
     # first byte: PACKET INFO
     if p == 1:
 
@@ -140,8 +140,8 @@ while mybyte:
             s += f"Add Mode: {byte0} {byte1}\n"
             b = 3
 
-            if fcf_type == fcft['CMD'] or fcf_type == fcft['DATA'] or fcf_type == fcft['BCN']:
-                key = fcft.keys()[fcft.values().index(fcf_type)]
+            if fcf_type == fcft['CMD'] or fcf_type == fcft['DATA'] or fcf_type == fcft['BCN'] or fcf_type == fcft['1_OCT_HEADER'] or fcf_type == fcft['RFID_BLINK']:
+                key = list(fcft.keys())[list(fcft.values()).index(fcf_type)]
                 row['FRAME_TYPE'] = key
                 if dest_add_mode != '00':
                     dest_pan = b''.join([pckt_payload[b + 1], pckt_payload[b]])
@@ -189,8 +189,22 @@ while mybyte:
                     row['FRAME_TYPE'] = 'ACK'
                     s += f"ACK packet with unexpected length\n"
             # type R111, R100
-            if fcf_type not in [fcft['DATA'], fcft['CMD'], fcft['BCN'], fcft['ACK']]:
-                row['FRAME_TYPE'] = fcf_type
+            if fcf_type == fcft['CSL_WAKEUP']:
+                row['FRAME_TYPE'] = 'CSL_WAKEUP'
+                dest_pan = b''.join([pckt_payload[5], pckt_payload[4]])
+                dest_add = b''.join([pckt_payload[7], pckt_payload[6]])
+
+                row['DEST_PAN'] = '0x' + dest_pan.hex()
+                row['DEST_ADD'] = '0x' + dest_add.hex()
+                s += f"\tDest PAN: {'0x' + dest_pan.hex()}\n\tDest Add: {'0x' + dest_add.hex()}\n"
+            if fcf_type == fcft['CSL_SECURE_ACK']:
+                row['FRAME_TYPE'] = 'CSL_SECURE_ACK'
+                dest_pan = b''.join([pckt_payload[5], pckt_payload[4]])
+                dest_add = b''.join([pckt_payload[7], pckt_payload[6]])
+
+                row['DEST_PAN'] = '0x' + dest_pan.hex()
+                row['DEST_ADD'] = '0x' + dest_add.hex()
+                s += f"\tDest PAN: {'0x' + dest_pan.hex()}\n\tDest Add: {'0x' + dest_add.hex()}\n"
 
 
             '''
