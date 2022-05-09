@@ -43,7 +43,7 @@ first = True
 # 11(-73) = -62, 9(-73) = -64, 10(-73) = -63 (RSSI)
 
 while mybyte:
-    if c == 150: break
+    if c == 1000: break
     # first byte: PACKET INFO
     if p == 1:
 
@@ -151,16 +151,22 @@ while mybyte:
                 if dest_add_mode != '00' and src_add_mode != '00':
                     if dest_add_mode == '11':
                         # long address
-                        dest_add = b''.join(pckt_payload[b:(b + LONG_LENGTH)][::-1])
-                        row['DEST_ADD'] = '0x' + dest_add.hex()
-                        s += f"\tDest Add: {'0x' + dest_add.hex()}\n"
-                        b += 8
+                        try:
+                            dest_add = b''.join(pckt_payload[b:(b + LONG_LENGTH)][::-1])
+                            row['DEST_ADD'] = '0x' + dest_add.hex()
+                            s += f"\tDest Add: {'0x' + dest_add.hex()}\n"
+                            b += 8
+                        except IndexError:
+                            row['DEST_ADD'] = 'unavailable'
                     else:
                         # short address
-                        dest_add = b''.join([pckt_payload[b + 1], pckt_payload[b]])
-                        row['DEST_ADD'] = '0x' + dest_add.hex()
-                        s += f"\tDest Add: {'0x' + dest_add.hex()}\n"
-                        b += 2
+                        try:
+                            dest_add = b''.join([pckt_payload[b + 1], pckt_payload[b]])
+                            row['DEST_ADD'] = '0x' + dest_add.hex()
+                            s += f"\tDest Add: {'0x' + dest_add.hex()}\n"
+                            b += 2
+                        except IndexError:
+                            row['DEST_ADD'] = 'unavailable'
                 if src_add_mode != '00' and pan_compr == '0':
                     src_pan = b''.join([pckt_payload[b + 1], pckt_payload[b]])
                     row['SRC_PAN'] = '0x' + src_pan.hex()
@@ -169,16 +175,22 @@ while mybyte:
                 if src_add_mode != '00':
                     if src_add_mode == '11':
                         # long address
-                        src_add = b''.join(pckt_payload[b:(b + LONG_LENGTH)][::-1])
-                        row['SRC_ADD'] = '0x' + src_add.hex()
-                        s += f"\tSrc Add: {'0x' + src_add.hex()}\n"
-                        b += 8
+                        try:
+                            src_add = b''.join(pckt_payload[b:(b + LONG_LENGTH)][::-1])
+                            row['SRC_ADD'] = '0x' + src_add.hex()
+                            s += f"\tSrc Add: {'0x' + src_add.hex()}\n"
+                            b += 8
+                        except IndexError:
+                            row['SRC_ADD'] = 'unavailable'
                     else:
                         # short address
-                        src_add = b''.join([pckt_payload[b + 1], pckt_payload[b]])
-                        row['SRC_ADD'] = '0x' + src_add.hex()
-                        s += f"\tSrc Add: {'0x' + src_add.hex()}\n"
-                        b += 2
+                        try:
+                            src_add = b''.join([pckt_payload[b + 1], pckt_payload[b]])
+                            row['SRC_ADD'] = '0x' + src_add.hex()
+                            s += f"\tSrc Add: {'0x' + src_add.hex()}\n"
+                            b += 2
+                        except IndexError:
+                            row['SRC_ADD'] = 'unavailable'
             # type ACK: 1 length: 5
             if fcf_type == fcft['ACK']:
                 if len(pckt_payload) == 5:
@@ -378,9 +390,9 @@ while mybyte:
         df = pd.concat([df, row_df], ignore_index=True, axis=0)
         row = {col: '' for col in columns}
 
-f = open("out.txt", "a")
-f.write(s)
-f.close()
+#f = open("out.txt", "a")
+#f.write(s)
+#f.close()
 df.to_csv('csvs/' + (filename.split('/')[1]).split('.')[0] + '.csv')
 
 
