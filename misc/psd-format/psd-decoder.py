@@ -33,7 +33,8 @@ N = 1
 # dataframe info
 columns = ['FCS', 'CORR', 'BUFF_OVERFLOW', 'GENERIC',
            'PCKT_NUM', 'TIME(MS)', 'LENGTH', 'PAYLOAD', 'RSSI', 'CRC_OK',
-           'FRAME_TYPE', 'DEST_PAN', 'DEST_ADD', 'SRC_PAN', 'SRC_ADD']
+           'FRAME_TYPE', 'SECURITY_ENABLED', 'FRAME_PENDING', 'ACKNOWLEDGE_REQ', 'PAN_COMPRESSION',
+           'DEST_PAN', 'DEST_ADD', 'SRC_PAN', 'SRC_ADD']
 df = pd.DataFrame(columns=columns)
 row = {col: '' for col in columns}
 first = True
@@ -132,6 +133,12 @@ while mybyte:
             byte0 = "{:08b}".format(int(pckt_payload[0].hex(), 16))[::-1]
             byte1 = "{:08b}".format(int(pckt_payload[1].hex(), 16))[::-1]
             # frame control field
+            # 'SECURITY_ENABLED', 'FRAME_PENDING', 'ACKNOWLEDGE_REQ', 'PAN_COMPRESSION',
+            row['SECURITY_ENABLED'] = byte0[3]
+            row['FRAME_PENDING'] = byte0[4]
+            row['ACKNOWLEDGE_REQ'] = byte0[5]
+            row['PAN_COMPRESSION'] = byte0[6]
+
             # Bit0-2: TYPE (invert)
             fcf_type = byte0[:3][::-1]
             pan_compr = byte0[6]
@@ -139,6 +146,10 @@ while mybyte:
             src_add_mode = ''.join([byte1[7], byte1[6]])
             s += f"Add Mode: {byte0} {byte1}\n"
             b = 3
+
+            if N > 256 or N < 0:
+                row['LENGTH'] = 'invalid'
+                print('invalid length')
 
             if fcf_type == fcft['CMD'] or fcf_type == fcft['DATA'] or fcf_type == fcft['BCN'] or fcf_type == fcft['1_OCT_HEADER'] or fcf_type == fcft['RFID_BLINK']:
                 key = list(fcft.keys())[list(fcft.values()).index(fcf_type)]
@@ -217,121 +228,6 @@ while mybyte:
                 row['DEST_PAN'] = '0x' + dest_pan.hex()
                 row['DEST_ADD'] = '0x' + dest_add.hex()
                 s += f"\tDest PAN: {'0x' + dest_pan.hex()}\n\tDest Add: {'0x' + dest_add.hex()}\n"
-
-
-            '''
-            # type CMD: 5 lengths: 10, 21, 18, 27, 12
-            if fcf_type == fcft['CMD']:
-                if len(pckt_payload) == 10:
-                    dest_pan = b''.join([pckt_payload[4], pckt_payload[3]])
-                    dest_add = b''.join([pckt_payload[6], pckt_payload[5]])
-                    s += f"\tDest PAN: {'0x' + dest_pan.hex()}\n\tDest Add: {'0x' + dest_add.hex()}\n"
-                    row['FRAME_TYPE'] = 'CMD'
-                    row['DEST_PAN'] = '0x' + dest_pan.hex()
-                    row['DEST_ADD'] = '0x' + dest_add.hex()
-                    row['SRC_PAN'] = ''
-                    row['SRC_ADD'] = ''
-                elif len(pckt_payload) == 21:
-                    dest_pan = b''.join([pckt_payload[4], pckt_payload[3]])
-                    dest_add = b''.join([pckt_payload[6], pckt_payload[5]])
-                    src_pan = b''.join([pckt_payload[8], pckt_payload[7]])
-                    src_add = b''.join(pckt_payload[9:(9 + LONG_LENGTH)][::-1])
-                    s += f"\tDest PAN: {'0x' + dest_pan.hex()}\n\tDest Add: {'0x' + dest_add.hex()}\n\tSrc PAN: {'0x' + src_pan.hex()}\n\tSrc Add: {'0x' + src_add.hex()}\n"
-                    row['FRAME_TYPE'] = 'CMD'
-                    row['DEST_PAN'] = '0x' + dest_pan.hex()
-                    row['DEST_ADD'] = '0x' + dest_add.hex()
-                    row['SRC_PAN'] = '0x' + src_pan.hex()
-                    row['SRC_ADD'] = '0x' + src_add.hex()
-                elif len(pckt_payload) == 18:
-                    dest_pan = b''.join([pckt_payload[4], pckt_payload[3]])
-                    dest_add = b''.join([pckt_payload[6], pckt_payload[5]])
-                    src_add = b''.join(pckt_payload[7:(7 + LONG_LENGTH)][::-1])
-                    s += f"\tDest PAN: {'0x' + dest_pan.hex()}\n\tDest Add: {'0x' + dest_add.hex()}\n\tSrc Add: {'0x' + src_add.hex()}\n"
-                    row['FRAME_TYPE'] = 'CMD'
-                    row['DEST_PAN'] = '0x' + dest_pan.hex()
-                    row['DEST_ADD'] = '0x' + dest_add.hex()
-                    row['SRC_PAN'] = ''
-                    row['SRC_ADD'] = '0x' + src_add.hex()
-                elif len(pckt_payload) == 27:
-                    dest_pan = b''.join([pckt_payload[4], pckt_payload[3]])
-                    dest_add = b''.join(pckt_payload[5:(5 + LONG_LENGTH)][::-1])
-                    src_add = b''.join(pckt_payload[((5 + LONG_LENGTH) + 1):((5 + LONG_LENGTH) + 1 + LONG_LENGTH)][::-1])
-                    s += f"\tDest PAN: {'0x' + dest_pan.hex()}\n\tDest Add: {'0x' + dest_add.hex()}\n\tSrc Add: {'0x' + src_add.hex()}\n"
-                    row['FRAME_TYPE'] = 'CMD'
-                    row['DEST_PAN'] = '0x' + dest_pan.hex()
-                    row['DEST_ADD'] = '0x' + dest_add.hex()
-                    row['SRC_PAN'] = ''
-                    row['SRC_ADD'] = '0x' + src_add.hex()
-                elif len(pckt_payload) == 12:
-                    dest_pan = b''.join([pckt_payload[4], pckt_payload[3]])
-                    dest_add = b''.join([pckt_payload[6], pckt_payload[5]])
-                    src_add = b''.join([pckt_payload[8], pckt_payload[7]])
-                    s += f"\tDest PAN: {'0x' + dest_pan.hex()}\n\tDest Add: {'0x' + dest_add.hex()}\n\tSrc Add: {'0x' + src_add.hex()}\n"
-                    row['FRAME_TYPE'] = 'CMD'
-                    row['DEST_PAN'] = '0x' + dest_pan.hex()
-                    row['DEST_ADD'] = '0x' + dest_add.hex()
-                    row['SRC_PAN'] = ''
-                    row['SRC_ADD'] = '0x' + src_add.hex()
-                elif len(pckt_payload) == 107:
-                    dest_pan = b''.join([pckt_payload[4], pckt_payload[3]])
-                    dest_add = b''.join([pckt_payload[6], pckt_payload[5]])
-                    src_add = b''.join([pckt_payload[8], pckt_payload[7]])
-                    s += f"\tDest PAN: {'0x' + dest_pan.hex()}\n\tDest Add: {'0x' + dest_add.hex()}\n\tSrc Add: {'0x' + src_add.hex()}\n"
-                    row['FRAME_TYPE'] = 'CMD'
-                    row['DEST_PAN'] = '0x' + dest_pan.hex()
-                    row['DEST_ADD'] = '0x' + dest_add.hex()
-                    row['SRC_PAN'] = ''
-                    row['SRC_ADD'] = '0x' + src_add.hex()
-                else:
-                    row['FRAME_TYPE'] = 'CMD'
-                    s += f"CMD packet with unexpected length\n"
-            # type BCN: 5 lengths: 13, 21, 23, 15, 17 (same fields)
-            if fcf_type == fcft['BCN']:
-                if len(pckt_payload) == 13 or len(pckt_payload) == 21 or len(pckt_payload) == 23 or len(pckt_payload) == 15 or len(pckt_payload) == 17:
-                    src_pan = b''.join([pckt_payload[4], pckt_payload[3]])
-                    src_add = b''.join([pckt_payload[6], pckt_payload[5]])
-                    s += f"\tSrc PAN: {'0x' + src_pan.hex()}\n\tSrc Add: {'0x' + src_add.hex()}\n"
-                    row['FRAME_TYPE'] = 'BCN'
-                    row['DEST_PAN'] = ''
-                    row['DEST_ADD'] = ''
-                    row['SRC_PAN'] = '0x' + src_pan.hex()
-                    row['SRC_ADD'] = '0x' + src_add.hex()
-                else:
-                    row['FRAME_TYPE'] = 'BCN'
-                    s += f"BCN packet with unexpected length\n"
-            # type ACK: 1 length: 5
-            if fcf_type == fcft['ACK']:
-                if len(pckt_payload) == 5:
-                    # no fields with addresses
-                    row['FRAME_TYPE'] = 'ACK'
-                    pass
-                else:
-                    row['FRAME_TYPE'] = 'ACK'
-                    s += f"ACK packet with unexpected length\n"
-            # type DATA: always different length
-            if fcf_type == fcft['DATA']:
-                dest_pan = b''.join([pckt_payload[4], pckt_payload[3]])
-                dest_add = b''.join([pckt_payload[6], pckt_payload[5]])
-                src_add = b''.join([pckt_payload[8], pckt_payload[7]])
-                s += f"\tDest PAN: {'0x' + dest_pan.hex()}\n\tDest Add: {'0x' + dest_add.hex()}\n\tSrc Add: {'0x' + src_add.hex()}\n"
-                row['FRAME_TYPE'] = 'DATA'
-                row['DEST_PAN'] = '0x' + dest_pan.hex()
-                row['DEST_ADD'] = '0x' + dest_add.hex()
-                row['SRC_PAN'] = ''
-                row['SRC_ADD'] = '0x' + src_add.hex()
-
-            # type R111, R100
-            if fcf_type not in [fcft['DATA'], fcft['CMD'], fcft['BCN'], fcft['ACK']]: # 108
-                dest_pan = b''.join([pckt_payload[4], pckt_payload[3]])
-                dest_add = b''.join([pckt_payload[6], pckt_payload[5]])
-                src_add = b''.join([pckt_payload[8], pckt_payload[7]])
-                s += f"\tDest PAN: {'0x' + dest_pan.hex()}\n\tDest Add: {'0x' + dest_add.hex()}\n\tSrc Add: {'0x' + src_add.hex()}\n"
-                row['FRAME_TYPE'] = fcf_type
-                row['DEST_PAN'] = '0x' + dest_pan.hex()
-                row['DEST_ADD'] = '0x' + dest_add.hex()
-                row['SRC_PAN'] = ''
-                row['SRC_ADD'] = '0x' + src_add.hex()
-            '''
 
             # failed tests for rssi (?)
             ba = bytearray(pckt_payload[-2])
