@@ -44,7 +44,7 @@ first = True
 # 11(-73) = -62, 9(-73) = -64, 10(-73) = -63 (RSSI)
 
 while mybyte:
-    if c == 1000: break
+    #if c == 1000: break
     # first byte: PACKET INFO
     if p == 1:
 
@@ -127,7 +127,7 @@ while mybyte:
     # (((1 + NUM) + TS) + LEN + 1) = 16
     if p > (((1 + NUM) + TS) + LEN + 1) and p <= ((((1 + NUM) + TS) + LEN + 1) + N): # 16 and (16 + N)
         pckt_payload.append(mybyte)
-        if p == ((((1 + NUM) + TS) + LEN + 1) + N): # (16 + N)
+        if p == ((((1 + NUM) + TS) + LEN + 1) + N) and len(pckt_payload) > 1: # (16 + N)
             s += f"PAYLOAD({N}): {pckt_payload}\n"
 
             byte0 = "{:08b}".format(int(pckt_payload[0].hex(), 16))[::-1]
@@ -155,17 +155,18 @@ while mybyte:
                 key = list(fcft.keys())[list(fcft.values()).index(fcf_type)]
                 row['FRAME_TYPE'] = key
                 if dest_add_mode != '00':
-                    dest_pan = b''.join([pckt_payload[b + 1], pckt_payload[b]])
-                    row['DEST_PAN'] = '0x' + dest_pan.hex()
-                    s += f"\tDest PAN: {'0x' + dest_pan.hex()}\n"
-                    b += 2
+                    try:
+                        dest_pan = b''.join([pckt_payload[b + 1], pckt_payload[b]])
+                        row['DEST_PAN'] = '0x' + dest_pan.hex()
+                        b += 2
+                    except IndexError:
+                        row['DEST_PAN'] = 'unavailable'
                 if dest_add_mode != '00' and src_add_mode != '00':
                     if dest_add_mode == '11':
                         # long address
                         try:
                             dest_add = b''.join(pckt_payload[b:(b + LONG_LENGTH)][::-1])
                             row['DEST_ADD'] = '0x' + dest_add.hex()
-                            s += f"\tDest Add: {'0x' + dest_add.hex()}\n"
                             b += 8
                         except IndexError:
                             row['DEST_ADD'] = 'unavailable'
@@ -174,22 +175,22 @@ while mybyte:
                         try:
                             dest_add = b''.join([pckt_payload[b + 1], pckt_payload[b]])
                             row['DEST_ADD'] = '0x' + dest_add.hex()
-                            s += f"\tDest Add: {'0x' + dest_add.hex()}\n"
                             b += 2
                         except IndexError:
                             row['DEST_ADD'] = 'unavailable'
                 if src_add_mode != '00' and pan_compr == '0':
-                    src_pan = b''.join([pckt_payload[b + 1], pckt_payload[b]])
-                    row['SRC_PAN'] = '0x' + src_pan.hex()
-                    s += f"\tSrc PAN: {'0x' + src_pan.hex()}\n"
-                    b += 2
+                    try:
+                        src_pan = b''.join([pckt_payload[b + 1], pckt_payload[b]])
+                        row['SRC_PAN'] = '0x' + src_pan.hex()
+                        b += 2
+                    except IndexError:
+                        row['SRC_PAN'] = 'unavailable'
                 if src_add_mode != '00':
                     if src_add_mode == '11':
                         # long address
                         try:
                             src_add = b''.join(pckt_payload[b:(b + LONG_LENGTH)][::-1])
                             row['SRC_ADD'] = '0x' + src_add.hex()
-                            s += f"\tSrc Add: {'0x' + src_add.hex()}\n"
                             b += 8
                         except IndexError:
                             row['SRC_ADD'] = 'unavailable'
@@ -198,7 +199,6 @@ while mybyte:
                         try:
                             src_add = b''.join([pckt_payload[b + 1], pckt_payload[b]])
                             row['SRC_ADD'] = '0x' + src_add.hex()
-                            s += f"\tSrc Add: {'0x' + src_add.hex()}\n"
                             b += 2
                         except IndexError:
                             row['SRC_ADD'] = 'unavailable'
@@ -214,20 +214,31 @@ while mybyte:
             # type R111, R100
             if fcf_type == fcft['CSL_WAKEUP']:
                 row['FRAME_TYPE'] = 'CSL_WAKEUP'
-                dest_pan = b''.join([pckt_payload[5], pckt_payload[4]])
-                dest_add = b''.join([pckt_payload[7], pckt_payload[6]])
-
-                row['DEST_PAN'] = '0x' + dest_pan.hex()
-                row['DEST_ADD'] = '0x' + dest_add.hex()
-                s += f"\tDest PAN: {'0x' + dest_pan.hex()}\n\tDest Add: {'0x' + dest_add.hex()}\n"
+                try:
+                    dest_pan = b''.join([pckt_payload[5], pckt_payload[4]])
+                    row['DEST_PAN'] = '0x' + dest_pan.hex()
+                except IndexError:
+                    row['DEST_PAN'] = 'unavailable'
+                try:
+                    dest_add = b''.join([pckt_payload[7], pckt_payload[6]])
+                    row['DEST_ADD'] = '0x' + dest_add.hex()
+                except IndexError:
+                    row['DEST_ADD'] = 'unavailable'
             if fcf_type == fcft['CSL_SECURE_ACK']:
                 row['FRAME_TYPE'] = 'CSL_SECURE_ACK'
-                dest_pan = b''.join([pckt_payload[5], pckt_payload[4]])
-                dest_add = b''.join([pckt_payload[7], pckt_payload[6]])
+                try:
+                    dest_pan = b''.join([pckt_payload[5], pckt_payload[4]])
+                    row['DEST_PAN'] = '0x' + dest_pan.hex()
+                except IndexError:
+                    row['DEST_PAN'] = 'unavailable'
+                try:
+                    dest_add = b''.join([pckt_payload[7], pckt_payload[6]])
+                    row['DEST_ADD'] = '0x' + dest_add.hex()
+                except IndexError:
+                    row['DEST_ADD'] = 'unavailable'
 
-                row['DEST_PAN'] = '0x' + dest_pan.hex()
-                row['DEST_ADD'] = '0x' + dest_add.hex()
-                s += f"\tDest PAN: {'0x' + dest_pan.hex()}\n\tDest Add: {'0x' + dest_add.hex()}\n"
+            if fcf_type not in fcft.values():
+                row['FRAME_TYPE'] = fcf_type
 
             # failed tests for rssi (?)
             ba = bytearray(pckt_payload[-2])
