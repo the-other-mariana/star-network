@@ -3,6 +3,13 @@ from fcf_type_codes import TYPES as fcft
 import pandas as pd
 
 filename = 'tests/TestWireless_1_160422.psd'
+#filename = 'tests/TestControl_150422.psd'
+#filename = 'tests/TestControl_2_160422.psd'
+#filename = 'tests/TestDoubleNetwork_1_160422.psd'
+#filename = 'tests/TestElectro_1_160422.psd'
+#filename = 'tests/TestNormal_1_160422.psd'
+#filename = 'tests/TestViento_1_160422.psd'
+
 file = open(filename,'rb')
 mybyte = file.read(1)
 
