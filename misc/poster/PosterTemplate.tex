@@ -53,8 +53,8 @@
 % Title
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\title{\VeryHuge{Modelo de predicción de la tasa de pérdida de \\ 
-paquetes en redes inalámbricas de sensores}}
+\title{\VeryHuge{Packet Status Prediction Model \\
+Using Packet Sniffer Data}}
 \author{Daniel Heráclito Pérez Díaz \and Mariana Ávalos Arce}
 \institute[shortinst]{Universidad Panamericana, Guadalajara, México}
 
@@ -66,7 +66,7 @@ paquetes en redes inalámbricas de sensores}}
 \href{mailto:0190575@up.edu.mx}{0190575@up.edu.mx}
 \href{mailto:0197495@up.edu.mx}{0197495@up.edu.mx} % this is a clickable link
   \hfill
-  Especialidad en Ciencia de Datos \hfill
+  Faculty of Engineering, Data Science \hfill
   {Poster Number: \#1} }
 % (can be left out to remove footer)  
 
@@ -105,11 +105,11 @@ paquetes en redes inalámbricas de sensores}}
     \separatorcolumnA
     \begin{column}{\colwidthA}
 
-        \begin{block}{Propuesta de la topología de red}
+        \begin{block}{Network Topology Proposal}
             \begin{figure}[!Ht]
             \centering
-                \includegraphics[width=\linewidth]{Figures/NetworkDistribution_EM2022.png}
-                \caption{Topología de Red.}
+                \includegraphics[width=0.8\linewidth]{Figures/network.png}
+                \caption{Network implementing a star topology.}
                 \label{fig:top}
             \end{figure}
         \end{block}
@@ -130,29 +130,29 @@ paquetes en redes inalámbricas de sensores}}
 
     \begin{column}[T]{\colwidthB}
 
-        \begin{block}{Metodología para encontrar la tendencia en los datos}
+        \begin{block}{Methodology For Finding Tendency in Data}
 
         \begin{figure}[!Ht]
             \centering
-                \includegraphics[width=\linewidth]{Figures/pipeline.png}
-                \caption{Esquema de la metodología a utilizar.}
+                \includegraphics[width=\linewidth]{Figures/method.png}
+                \caption{Diagram of the methodology.}
                 \label{fig:pipe}
         \end{figure}
     \end{block}
     
     \begin{block}{Hardware}
-        El equipo o hardware que formarán la red a analizar está formado por placas de evaluación de la compañía Texas Instruments:
+        The equipment or hardware that will constitute the network to be analyzed are Texas Instruments' Evaluation Boards:
 
         \begin{figure}[!Ht]
             \centering
                 \includegraphics[width=\linewidth]{Figures/hardware.png}
-                \caption{Hardware de Texas Instruments.}
+                \caption{Texas Instruments hardware to be used.}
                 \label{fig:hw}
         \end{figure}
     \end{block}
 
-    \begin{alertblock}{La Red}
-        Los protocolos implementados por la red están basados en el estándar IEEE 802.15.4.
+    \begin{alertblock}{The Network}
+        The protocols implemented by the network are based on IEEE 802.15.4.
     \end{alertblock}
         
 \end{column}
@@ -162,13 +162,13 @@ paquetes en redes inalámbricas de sensores}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{column}[T]{\colwidthB}
 
-    \begin{block}{Aplicaciones}
-    Un desarrollo de IoT (Internet of Things) son las Ciudades Inteligentes o Smart Cities, donde éstas se definen como la mejora de la calidad de vida de los ciudadanos a través del uso de hardware, software, redes y datos. La pregunta que el modelo de predicción de la presente propuesta respondería sería principalmente si en una Smart City, cuya red presenta pérdida de paquetes, requiere de más routers o simplemente un reacomodo de sus nodos, a partir de la interferencia que presenta.
+    \begin{block}{Applications}
+    An IoT (internet of Things) development example are Smart Cities, where these are defined as the quality of living improvement through the use of hardware, software, networks and data. The question that the prediction model would answer on a wider scale would be if, on a Smart City, whose network is presenting packet loss, the real need is \textit{more routers} or simply a \textit{rearrangement of the network's nodes}, coming from the type of interference it presents.
 
         \begin{figure}[!Ht]
             \centering
-                \includegraphics[width=\linewidth]{Figures/smart-city-app.png}
-                \caption{Smart City.}
+                \includegraphics[width=0.7\linewidth]{Figures/smart-city-app.png}
+                \caption{Smart City node rearrangement.}
                 \label{fig:app}
         \end{figure}
     \end{block}
@@ -180,7 +180,7 @@ paquetes en redes inalámbricas de sensores}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % References
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{block}{Referencias}
+\begin{block}{References}
 
 \nocite{*}
 \bibliography{poster}% Produces the bibliography via BibTeX.
